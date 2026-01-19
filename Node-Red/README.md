@@ -53,9 +53,7 @@ This flow reads a **single Modbus value** (typically a 32-bit float stored in tw
 
 ### 📷 Flow Diagram
 
-```text
 ![Read Single Modbus Register](modbus_single_register.png)
-```
 
 ### ⚙️ How It Works
 
@@ -100,9 +98,7 @@ This flow reads **multiple Modbus registers at once** using a single Modbus TCP 
 
 ### 📷 Flow Diagram
 
-```text
 ![Read Multiple Modbus Registers](modbus_multiple_register.png)
-```
 
 ### ⚙️ How It Works
 
@@ -127,9 +123,7 @@ This flow creates an **OPC UA server**, dynamically adds folders and variables, 
 
 ### 📷 Flow Diagram
 
-```text
 ![OPC UA Server](opcua_server.png)
-```
 
 ---
 
