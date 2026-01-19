@@ -1,0 +1,301 @@
+[
+    {
+        "id": "4228599f7e908e40",
+        "type": "OpcUa-Server",
+        "z": "62bc110cd7f22d03",
+        "port": "53881",
+        "name": "",
+        "endpoint": "Datall",
+        "nodesetDir": "",
+        "autoAcceptUnknownCertificate": true,
+        "registerToDiscovery": false,
+        "constructDefaultAddressSpace": true,
+        "allowAnonymous": true,
+        "endpointNone": true,
+        "endpointSign": true,
+        "endpointSignEncrypt": true,
+        "endpointBasic128Rsa15": true,
+        "endpointBasic256": true,
+        "endpointBasic256Sha256": true,
+        "maxNodesPerBrowse": 0,
+        "maxNodesPerHistoryReadData": 0,
+        "maxNodesPerHistoryReadEvents": 0,
+        "maxNodesPerHistoryUpdateData": 0,
+        "maxNodesPerRead": 0,
+        "maxNodesPerWrite": 0,
+        "maxNodesPerMethodCall": 0,
+        "maxNodesPerRegisterNodes": 0,
+        "maxNodesPerNodeManagement": 0,
+        "maxMonitoredItemsPerCall": 0,
+        "maxNodesPerHistoryUpdateEvents": 0,
+        "maxNodesPerTranslateBrowsePathsToNodeIds": 0,
+        "maxConnectionsPerEndpoint": "",
+        "maxMessageSize": "",
+        "maxBufferSize": "",
+        "maxSessions": "",
+        "x": 1260,
+        "y": 500,
+        "wires": [
+            [
+                "b7e02e959a2fd6f4"
+            ]
+        ]
+    },
+    {
+        "id": "b7e02e959a2fd6f4",
+        "type": "debug",
+        "z": "62bc110cd7f22d03",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "4868941a246ba9bd",
+        "type": "function",
+        "z": "62bc110cd7f22d03",
+        "name": "Add Main Folder",
+        "func": "msg = {\n    payload: {\n        opcuaCommand: \"addFolder\"\n    },\n    topic: \"ns=1;s=MainFolder\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 380,
+        "wires": [
+            [
+                "4228599f7e908e40"
+            ]
+        ]
+    },
+    {
+        "id": "c950584216305842",
+        "type": "inject",
+        "z": "62bc110cd7f22d03",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 680,
+        "y": 380,
+        "wires": [
+            [
+                "4868941a246ba9bd"
+            ]
+        ]
+    },
+    {
+        "id": "898fbb846966f294",
+        "type": "function",
+        "z": "62bc110cd7f22d03",
+        "name": "Set Variables Value",
+        "func": "// Initialize globals if not set (adjust initial values as needed)\nlet list = global.get(\"TopicLists\")\n// node.warn(list);\n\nlet cnt_key = \"CounterSet\"\nlet cnt = global.get(cnt_key);\n\nif (cnt < list.length && list[cnt] !== undefined) {\n    let topic_name = list[cnt];\n    // node.warn(global.get(topic_name));\n    let val = global.get(topic_name);\n    if (val == undefined) {\n        val = -1;\n        node.warn(\"value undefined\")\n    }\n    msg = {\n        payload: {\n            messageType: \"Variable\",\n            variableName: topic_name,\n            datatype: \"Float\",\n            namespace: \"1\",\n            variableValue: global.get(topic_name)\n        }\n    };\n    // node.warn(\"set value : \" + JSON.stringify(msg));\n    // node.warn(\"global counter : \" + cnt)\n    // node.warn(\"topic : \" + topic_modify )\n    global.set(cnt_key, cnt + 1);\n    return msg;\n} else {\n    global.set(cnt_key, 0);\n    // All items processed or invalid state; reset counter or handle end-of-list\n    // node.warn('Counter reached end of list or invalid item; resetting counter.');\n    return null; // Or return a completion message, e.g., { payload: { opcuaCommand: \"done\" } }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 620,
+        "wires": [
+            [
+                "4228599f7e908e40"
+            ]
+        ]
+    },
+    {
+        "id": "69aac47583239633",
+        "type": "inject",
+        "z": "62bc110cd7f22d03",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "7",
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 680,
+        "y": 620,
+        "wires": [
+            [
+                "898fbb846966f294"
+            ]
+        ]
+    },
+    {
+        "id": "95cf503fcb60b081",
+        "type": "inject",
+        "z": "62bc110cd7f22d03",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "0.1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "4",
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 680,
+        "y": 560,
+        "wires": [
+            [
+                "ccee526bc1f33c84"
+            ]
+        ]
+    },
+    {
+        "id": "ccee526bc1f33c84",
+        "type": "function",
+        "z": "62bc110cd7f22d03",
+        "name": "Add Variables",
+        "func": "// Initialize globals if not set (adjust initial values as needed)\nlet list = global.get(\"TopicLists\")\n// node.warn(list);\n\nlet cnt_key = \"CounterAdd\"\nlet cnt = global.get(cnt_key);\n\nif (cnt < list.length && list[cnt] !== undefined) {\n    let topic_modify = \"ns=1;s=\" + list[cnt] + \";datatype=Float\";\n    msg = {\n        payload: {\n            opcuaCommand: \"addVariable\"\n        },\n        topic: topic_modify\n    };\n    // node.warn(\"global counter : \" + cnt)\n    // node.warn(\"topic : \" + topic_modify )\n    global.set(cnt_key , cnt + 1);\n    return msg;\n} else {\n    // All items processed or invalid state; reset counter or handle end-of-list\n    // node.warn('Counter reached end of list or invalid item; resetting counter.');\n    return null;  // Or return a completion message, e.g., { payload: { opcuaCommand: \"done\" } }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 560,
+        "wires": [
+            [
+                "4228599f7e908e40"
+            ]
+        ]
+    },
+    {
+        "id": "11ae4ba67f34a52f",
+        "type": "function",
+        "z": "62bc110cd7f22d03",
+        "name": "Set Second Folder",
+        "func": "msg = {\n    payload: {\n        opcuaCommand: \"setFolder\"\n    },\n    topic: \"ns=1;s=SecondFolder\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 500,
+        "wires": [
+            [
+                "4228599f7e908e40"
+            ]
+        ]
+    },
+    {
+        "id": "333c6f554ded42aa",
+        "type": "inject",
+        "z": "62bc110cd7f22d03",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 680,
+        "y": 500,
+        "wires": [
+            [
+                "11ae4ba67f34a52f"
+            ]
+        ]
+    },
+    {
+        "id": "9deef88de74cc28c",
+        "type": "inject",
+        "z": "62bc110cd7f22d03",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 680,
+        "y": 440,
+        "wires": [
+            [
+                "3e687af102c05781"
+            ]
+        ]
+    },
+    {
+        "id": "3e687af102c05781",
+        "type": "function",
+        "z": "62bc110cd7f22d03",
+        "name": "Set Global Variables",
+        "func": "// Define your array (string list)\nvar myGlobalList = [\n    \"Variable1\",\n    \"Variable2\",\n    \"Variable3\"\n];\n\n// Set it in the global context (key: \"myGlobalList\")\nglobal.set(\"TopicLists\", myGlobalList);\nglobal.set(\"CounterAdd\", 0) //counter for adding variable into opcua server\nglobal.set(\"CounterSet\", 0) //counter for setting variable value in opcua server\n// Optional: Log to debug (visible in Node-RED debug panel)\nnode.warn(\"Global list set: \" + JSON.stringify(global.get(\"G18TopicLists\")));\n\n// Pass the message along (or return null to stop here)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a8c052aab919e23",
+        "type": "junction",
+        "z": "62bc110cd7f22d03",
+        "x": 1620,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8dd6ee6b41d3ec2f",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-opcua": "0.2.345"
+        }
+    }
+]
