@@ -45,10 +45,10 @@ jobs:
       run: |
         mkdir -p dist/OPCUALoggerGUI_Distribution
         if [ "${{ runner.os }}" = "Windows" ]; then
-          copy "dist\OPCUALoggerGUI.exe" "dist\OPCUALoggerGUI_Distribution\"
-          copy "README_GUI.md" "dist\OPCUALoggerGUI_Distribution\"
-          copy "sample_tags.csv" "dist\OPCUALoggerGUI_Distribution\"
-          copy "config.yaml" "dist\OPCUALoggerGUI_Distribution\"
+          cp "dist/OPCUALoggerGUI.exe" "dist/OPCUALoggerGUI_Distribution/"
+          cp "README_GUI.md" "dist/OPCUALoggerGUI_Distribution/"
+          cp "sample_tags.csv" "dist/OPCUALoggerGUI_Distribution/"
+          cp "config.yaml" "dist/OPCUALoggerGUI_Distribution/"
         else
           cp dist/OPCUALoggerGUI dist/OPCUALoggerGUI_Distribution/ || cp dist/OPCUALoggerGUI.app/Contents/MacOS/OPCUALoggerGUI dist/OPCUALoggerGUI_Distribution/OPCUALoggerGUI
           cp README_GUI.md dist/OPCUALoggerGUI_Distribution/
