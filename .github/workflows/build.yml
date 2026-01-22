@@ -41,6 +41,7 @@ jobs:
         pyinstaller opcua_logger_gui.spec --clean --noconfirm
     
     - name: Create distribution package
+      shell: bash
       run: |
         mkdir -p dist/OPCUALoggerGUI_Distribution
         if [ "${{ runner.os }}" = "Windows" ]; then
@@ -56,6 +57,7 @@ jobs:
         fi
     
     - name: Create archive
+      shell: bash
       run: |
         cd dist
         if [ "${{ runner.os }}" = "Windows" ]; then
