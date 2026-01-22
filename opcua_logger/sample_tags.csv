@@ -1,0 +1,9 @@
+name,node_id
+Demo_Static_Scalar_Float,ns=3;s=Demo.Static.Scalar.Float
+Demo_Static_Scalar_Double,ns=3;s=Demo.Static.Scalar.Double
+Demo_Static_Scalar_Boolean,ns=3;s=Demo.Static.Scalar.Boolean
+Demo_Static_Scalar_String,ns=3;s=Demo.Static.Scalar.String
+Demo_Dynamic_Scalar_Float,ns=3;s=Demo.Dynamic.Scalar.Float
+Demo_Dynamic_Scalar_Double,ns=3;s=Demo.Dynamic.Scalar.Double
+Demo_Dynamic_Scalar_Boolean,ns=3;s=Demo.Dynamic.Scalar.Boolean
+Demo_Dynamic_Scalar_String,ns=3;s=Demo.Dynamic.Scalar.String

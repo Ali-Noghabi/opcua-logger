@@ -1,0 +1,89 @@
+name: Build Standalone Executables
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, master ]
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements_build.txt
+    
+    - name: Build executable (Linux/Mac)
+      if: runner.os != 'Windows'
+      run: |
+        pyinstaller opcua_logger_gui.spec --clean --noconfirm
+    
+    - name: Build executable (Windows)
+      if: runner.os == 'Windows'
+      run: |
+        pyinstaller opcua_logger_gui.spec --clean --noconfirm
+    
+    - name: Create distribution package
+      run: |
+        mkdir -p dist/OPCUALoggerGUI_Distribution
+        if [ "${{ runner.os }}" = "Windows" ]; then
+          copy "dist\OPCUALoggerGUI.exe" "dist\OPCUALoggerGUI_Distribution\"
+          copy "README_GUI.md" "dist\OPCUALoggerGUI_Distribution\"
+          copy "sample_tags.csv" "dist\OPCUALoggerGUI_Distribution\"
+          copy "config.yaml" "dist\OPCUALoggerGUI_Distribution\"
+        else
+          cp dist/OPCUALoggerGUI dist/OPCUALoggerGUI_Distribution/ || cp dist/OPCUALoggerGUI.app/Contents/MacOS/OPCUALoggerGUI dist/OPCUALoggerGUI_Distribution/OPCUALoggerGUI
+          cp README_GUI.md dist/OPCUALoggerGUI_Distribution/
+          cp sample_tags.csv dist/OPCUALoggerGUI_Distribution/
+          cp config.yaml dist/OPCUALoggerGUI_Distribution/
+        fi
+    
+    - name: Create archive
+      run: |
+        cd dist
+        if [ "${{ runner.os }}" = "Windows" ]; then
+          7z a OPCUALoggerGUI_Windows.zip OPCUALoggerGUI_Distribution/
+        elif [ "${{ runner.os }}" = "macOS" ]; then
+          tar -czf OPCUALoggerGUI_macOS.tar.gz OPCUALoggerGUI_Distribution/
+        else
+          tar -czf OPCUALoggerGUI_Linux.tar.gz OPCUALoggerGUI_Distribution/
+        fi
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: opcua-logger-gui-${{ runner.os }}
+        path: |
+          dist/*.zip
+          dist/*.tar.gz
+        retention-days: 30
+    
+    - name: Upload release assets
+      if: github.event_name == 'release'
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: |
+          dist/*.zip
+          dist/*.tar.gz
+        asset_name: OPCUALoggerGUI-${{ runner.os }}
+        asset_content_type: application/octet-stream
