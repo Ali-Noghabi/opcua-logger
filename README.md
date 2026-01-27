@@ -1,6 +1,6 @@
 # OPC UA Logger
 
-A Python application that subscribes to OPC UA tags and logs data changes to JSON files with CSV conversion capability.
+A Python application that subscribes to OPC UA tags and logs data changes to JSON files with CSV conversion capability. Available as both CLI and GUI versions.
 
 ## Features
 
@@ -11,6 +11,7 @@ A Python application that subscribes to OPC UA tags and logs data changes to JSO
 - ✅ Certificate generation for encrypted connections
 - ✅ JSON output with tag names and timestamps
 - ✅ JSON to CSV conversion utility
+- ✅ GUI application for easy configuration and monitoring
 - ✅ Proper exception handling and logging
 
 ## Installation
@@ -26,9 +27,31 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## Quick Start
+
+### GUI Version (Recommended)
+
+Run the GUI application:
+```bash
+python run_gui.py
+```
+
+The GUI provides:
+- **Configuration Tab**: Set server connection, security settings, and logging options
+- **Tags Tab**: Manage OPC UA tags with CSV import/export
+- **Actions Tab**: Generate certificates and convert JSON to CSV
+- **Logs Tab**: Start/stop logger and view real-time logs
+
+### CLI Version
+
+Edit `config.yaml` to configure your OPC UA server and tags, then run:
+```bash
+./run_logger.sh
+```
+
 ## Security Configuration
 
-### All Available Security Policies:
+### Available Security Policies:
 - `None` - No encryption
 - `Basic128Rsa15` - Basic 128-bit RSA encryption
 - `Basic256` - Basic 256-bit encryption
@@ -36,7 +59,7 @@ pip install -r requirements.txt
 - `Aes128Sha256RsaOaep` - AES 128-bit with SHA-256 and RSA-OAEP
 - `Aes256Sha256RsaPss` - AES 256-bit with SHA-256 and RSA-PSS
 
-### All Available Message Security Modes:
+### Available Message Security Modes:
 - `None` - No security
 - `Sign` - Sign messages only
 - `SignAndEncrypt` - Sign and encrypt messages
@@ -52,6 +75,8 @@ For encrypted connections, generate certificates:
 # Or generate manually
 python generate_cert.py --cn "MyOPCUAClient" --org "MyCompany" --days 3650 --update-config
 ```
+
+In the GUI, go to the **Actions** tab to generate certificates with a graphical interface.
 
 ## Configuration
 
@@ -83,12 +108,24 @@ logging:
 
 ## Usage
 
-### Basic Usage (No Encryption)
+### GUI Usage
+
+1. **Configure Server**: Set your OPC UA server URL in the Configuration tab
+2. **Add Tags**: Add tags you want to monitor in the Tags tab
+   - You can add tags manually or import from CSV
+   - Sample CSV format provided in `sample_tags.csv`
+3. **Save Configuration**: Click "Save Configuration" to save your settings
+4. **Start Logging**: Go to the Logs tab and click "Start Logger"
+5. **Monitor Data**: Watch real-time log output for connection status and data collection
+
+### CLI Usage
+
+#### Basic Usage (No Encryption)
 ```bash
 ./run_logger.sh
 ```
 
-### Convert JSON to CSV
+#### Convert JSON to CSV
 ```bash
 # Convert default JSON file to CSV
 python3 json_to_csv.py
@@ -97,7 +134,7 @@ python3 json_to_csv.py
 python3 json_to_csv.py opcua_data.json opcua_data.csv
 ```
 
-### With Encryption
+#### With Encryption
 ```bash
 # 1. Generate certificates
 ./setup_certificates.sh
@@ -110,7 +147,7 @@ python3 json_to_csv.py opcua_data.json opcua_data.csv
 ./run_logger.sh
 ```
 
-### Testing
+#### Testing
 ```bash
 # Test with built-in test server
 ./test_connection.sh
@@ -161,27 +198,13 @@ update_timestamp,2024-01-15 10:30:15.123456,2024-01-15 10:30:15.123456,2024-01-1
 2024-01-15 10:30:25.345678,2024-01-15 10:30:25.345678,2024-01-15 10:30:25.345678
 ```
 
-## Security Policy Combinations
-
-The logger supports all combinations of security policies and message modes:
-
-| Security Policy | Message Mode | asyncua Security Type |
-|---------------|--------------|---------------------|
-| None | None | NoSecurity |
-| Basic128Rsa15 | Sign | Basic128Rsa15_Sign |
-| Basic128Rsa15 | SignAndEncrypt | Basic128Rsa15_SignAndEncrypt |
-| Basic256 | Sign | Basic256_Sign |
-| Basic256 | SignAndEncrypt | Basic256_SignAndEncrypt |
-| Basic256Sha256 | Sign | Basic256Sha256_Sign |
-| Basic256Sha256 | SignAndEncrypt | Basic256Sha256_SignAndEncrypt |
-| Aes128Sha256RsaOaep | Sign | Aes128Sha256RsaOaep_Sign |
-| Aes128Sha256RsaOaep | SignAndEncrypt | Aes128Sha256RsaOaep_SignAndEncrypt |
-
 ## Dependencies
 
 - `asyncua`: Modern async OPC UA client library
 - `pyyaml`: YAML configuration file parsing
 - `cryptography`: Certificate generation
+- `pandas`: CSV conversion (for GUI)
+- `tkinter`: GUI framework (usually included with Python)
 
 ## Troubleshooting
 
@@ -201,13 +224,20 @@ The logger supports all combinations of security policies and message modes:
 2. Check certificate paths in config.yaml
 3. Regenerate certificates if needed
 
-## Files
+## Project Structure
 
-- `opcua_logger.py` - Main application
-- `config.yaml` - Configuration file
-- `generate_cert.py` - Certificate generator
-- `json_to_csv.py` - JSON to CSV conversion utility
-- `setup_certificates.sh` - Certificate setup script
-- `test_server.py` - Test OPC UA server
-- `test_connection.sh` - Connection test script
-- `run_logger.sh` - Main application runner
+```
+opcua-logger/
+├── opcua_logger.py           # Main CLI application
+├── opcua_logger_gui.py       # GUI application
+├── run_gui.py                # GUI launcher
+├── config.yaml               # Configuration file
+├── generate_cert.py          # Certificate generator
+├── json_to_csv.py            # JSON to CSV conversion utility
+├── setup_certificates.sh     # Certificate setup script
+├── test_server.py            # Test OPC UA server
+├── test_connection.sh        # Connection test script
+├── run_logger.sh             # CLI application runner
+├── sample_tags.csv           # Sample tags configuration
+└── requirements.txt          # Python dependencies
+```
