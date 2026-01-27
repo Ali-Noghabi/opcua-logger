@@ -1,6 +1,8 @@
 logging:
-  data_file: opcua_data.json
+  data_file: opcua_data.jsonl
   timestamp_format: '%Y-%m-%d %H:%M:%S.%f'
+  flush_interval_seconds: 10.0
+  flush_max_pending: 100
 server:
   certificate_path: /mnt/sda2/home-backup/Datall/pet_projects/opcua_logger/certs/opcua_client_certificate.pem
   message_security_mode: None

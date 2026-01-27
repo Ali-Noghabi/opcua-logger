@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-"""
-OPC UA Logger GUI
-A comprehensive GUI for configuring and running the OPC UA logger
-"""
-
-import tkinter as tk
+﻿import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, scrolledtext
 import yaml
 import json
@@ -16,7 +10,20 @@ import queue
 import time
 from typing import Dict, List, Any, Optional
 import pandas as pd
+import logging
+from opcua_logger import OPCUALogger
+from jsonl_to_csv import JSONLToCSVConverter
+from generate_cert import CertificateGenerator
 
+class QueueHandler(logging.Handler):
+    """Logging handler that puts messages into a queue."""
+    def __init__(self, log_queue):
+        super().__init__()
+        self.log_queue = log_queue
+
+    def emit(self, record):
+        msg = self.format(record)
+        self.log_queue.put(msg)
 
 class OPCUALoggerGUI:
     def __init__(self, root):
@@ -58,7 +65,11 @@ class OPCUALoggerGUI:
         return {
             'logging': {
                 'data_file': 'opcua_data.json',
-                'timestamp_format': '%Y-%m-%d %H:%M:%S.%f'
+                'timestamp_format': '%Y-%m-%d %H:%M:%S.%f',
+            'flush_interval_seconds': 10.0,
+            'flush_max_pending': 100,
+            'flush_interval_seconds': 10.0,
+            'flush_max_pending': 100
             },
             'server': {
                 'url': 'opc.tcp://localhost:4840',
@@ -170,7 +181,9 @@ class OPCUALoggerGUI:
         timestamp_formats = [
             '%Y-%m-%d %H:%M:%S.%f',
             '%Y-%m-%d %H:%M:%S',
+            'unix',  # Unix timestamp
             '%d/%m/%Y %H:%M:%S',
+            '%m/%d/%Y %H:%M:%S',
             '%Y-%m-%dT%H:%M:%S.%fZ'
         ]
         ttk.Combobox(logging_frame, textvariable=self.timestamp_format_var, values=timestamp_formats, width=47).grid(row=1, column=1, sticky=tk.W+tk.E, pady=2)
@@ -460,98 +473,150 @@ class OPCUALoggerGUI:
     def generate_certificate(self):
         """Generate OPC UA certificate."""
         try:
-            # Run certificate generation script
-            cmd = [
-                'python3', 'generate_cert.py',
-                '--cn', self.cert_cn_var.get(),
-                '--org', self.cert_org_var.get(),
-                '--country', self.cert_country_var.get(),
-                '--output-dir', self.cert_dir_var.get(),
-                '--update-config'
-            ]
+            # Use CertificateGenerator class instead of subprocess
+            cert_gen = CertificateGenerator()
             
-            result = subprocess.run(cmd, capture_output=True, text=True)
+            # Generate certificate
+            result = cert_gen.generate(
+                common_name=self.cert_cn_var.get(),
+                organization=self.cert_org_var.get(),
+                country=self.cert_country_var.get(),
+                output_dir=self.cert_dir_var.get(),
+                update_config=True
+            )
             
-            if result.returncode == 0:
-                messagebox.showinfo("Success", "Certificate generated successfully!\n\n" + result.stdout)
+            if result:
+                messagebox.showinfo("Success", "Certificate generated successfully!")
                 # Reload config to get new certificate paths
                 self.config = self.load_config()
                 self.cert_path_var.set(self.config['server']['certificate_path'] or '')
                 self.key_path_var.set(self.config['server']['private_key_path'] or '')
             else:
-                messagebox.showerror("Error", f"Error generating certificate:\n\n{result.stderr}")
+                messagebox.showerror("Error", "Failed to generate certificate")
                 
         except Exception as e:
             messagebox.showerror("Error", f"Error generating certificate: {e}")
     
     def convert_json_to_csv(self):
-        """Convert JSON data to CSV."""
+        """Convert JSONL to CSV using the JSONLToCSVConverter class."""
+        jsonl_path = self.json_file_var.get()
+        csv_path = self.csv_file_var.get()
+
+        if not jsonl_path or not csv_path:
+            messagebox.showwarning("Warning", "Please select both input JSONL file and output CSV file.")
+            return
+
         try:
-            # Run conversion script
-            cmd = ['python3', 'json_to_csv.py', self.json_file_var.get(), self.csv_file_var.get()]
-            result = subprocess.run(cmd, capture_output=True, text=True)
+            if not os.path.exists(jsonl_path):
+                messagebox.showerror("Error", f"File not found:\n{jsonl_path}")
+                return
+
+            # Use the JSONLToCSVConverter class
+            converter = JSONLToCSVConverter()
             
-            if result.returncode == 0:
-                messagebox.showinfo("Success", "JSON converted to CSV successfully!\n\n" + result.stdout)
+            # Load and convert data
+            if converter.load_jsonl(jsonl_path):
+                if converter.convert_to_csv(csv_path, format_type="old_format"):
+                    # Get summary for feedback
+                    summary = converter.get_data_summary()
+                    tag_count = len(summary)
+                    total_rows = sum(count for count in summary.values()) * 2  # value + timestamp rows
+                    
+                    success_msg = (
+                        f"Successfully converted\n"
+                        f"  {jsonl_path}\n"
+                        f"to\n"
+                        f"  {csv_path}\n"
+                        f"({tag_count} tags, {total_rows} rows)"
+                    )
+                    
+                    self.log_text.insert(tk.END,
+                        "[%s] %s\n" % (
+                            time.strftime('%Y-%m-%d %H:%M:%S'),
+                            success_msg.replace('\n', ' — ')
+                        )
+                    )
+                    self.log_text.see(tk.END)
+                    
+                    messagebox.showinfo("Conversion Finished", success_msg)
+                else:
+                    messagebox.showerror("Error", "Failed to convert data to CSV")
             else:
-                messagebox.showerror("Error", f"Error converting JSON to CSV:\n\n{result.stderr}")
-                
+                messagebox.showerror("Error", "Failed to load JSONL file")
+
         except Exception as e:
-            messagebox.showerror("Error", f"Error converting JSON to CSV: {e}")
-    
+            messagebox.showerror("Error", f"Conversion failed:\n{str(e)}")
+            self.log_text.insert(tk.END,
+                f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Error during conversion: {str(e)}\n")
+            self.log_text.see(tk.END)
+
     def start_logger(self):
-        """Start the OPC UA logger."""
+        """Start the OPC UA logger inside this process."""
         if not self.config.get('tags'):
             messagebox.showwarning("Warning", "No tags configured. Please add tags before starting the logger.")
             return
-        
+
         try:
             # Save current configuration
             self.save_configuration()
-            
-            # Start logger process
-            self.logger_process = subprocess.Popen(
-                ['python3', 'opcua_logger.py'],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True,
-                bufsize=1,
-                universal_newlines=True
-            )
-            
-            # Start thread to read output
-            threading.Thread(target=self.read_logger_output, daemon=True).start()
-            
+
+            # Start logger in a thread
+            import asyncio
+            from opcua_logger import OPCUALogger
+
+            def run_logger():
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+                # Create logger instance
+                logger = OPCUALogger(self.config_file)
+                self.opcua_logger_instance = logger  # Save reference to stop later
+
+                # Add QueueHandler
+                qhandler = QueueHandler(self.log_queue)
+                qhandler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+                logger.logger.addHandler(qhandler)
+                logger.logger.setLevel(logging.WARNING)
+
+                try:
+                    loop.run_until_complete(logger.run())
+                except Exception as e:
+                    self.log_queue.put(f"Logger error: {e}")
+                finally:
+                    loop.close()
+
+            self.logger_thread = threading.Thread(target=run_logger, daemon=True)
+            self.logger_thread.start()
+
             # Update UI
             self.start_button.config(state=tk.DISABLED)
             self.stop_button.config(state=tk.NORMAL)
-            
             self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Logger started...\n")
             self.log_text.see(tk.END)
-            
+
         except Exception as e:
             messagebox.showerror("Error", f"Error starting logger: {e}")
-    
+
+
     def stop_logger(self):
-        """Stop the OPC UA logger."""
-        if self.logger_process:
-            try:
-                self.logger_process.terminate()
-                self.logger_process.wait(timeout=5)
-                
-                self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Logger stopped.\n")
-                self.log_text.see(tk.END)
-                
-            except subprocess.TimeoutExpired:
-                self.logger_process.kill()
-                self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Logger force killed.\n")
-                self.log_text.see(tk.END)
-            
-            self.logger_process = None
-        
-        # Update UI
-        self.start_button.config(state=tk.NORMAL)
-        self.stop_button.config(state=tk.DISABLED)
+        """Stop the OPC UA logger cleanly."""
+        try:
+            if hasattr(self, 'opcua_logger_instance'):
+                # Signal the async logger to stop
+                if hasattr(self.opcua_logger_instance, 'stop_event'):
+                    self.opcua_logger_instance.stop_event.set()
+                    self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Logger stopping...\n")
+                else:
+                    self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Stop event not found, cannot fully stop\n")
+            else:
+                self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Logger not running\n")
+
+            # Update UI
+            self.start_button.config(state=tk.NORMAL)
+            self.stop_button.config(state=tk.DISABLED)
+            self.log_text.see(tk.END)
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error stopping logger: {e}")
     
     def read_logger_output(self):
         """Read logger output and add to queue."""

@@ -1,7 +1,8 @@
-import asyncio
+﻿import asyncio
 import json
 import logging
 import yaml
+import time
 from datetime import datetime, date
 from typing import Dict, List, Any, Optional
 from asyncua import Client, ua
@@ -13,8 +14,12 @@ class OPCUALogger:
         self.config = self._load_config(config_path)
         self.client: Optional[Client] = None
         self.subscriptions: Dict[str, Any] = {}
-        self.tag_data: Dict[str, List[Dict[str, Any]]] = {}
-        
+        self.tag_data: Dict[str, List[Dict]] = {}           # still in-memory history (optional)
+        self.pending_data: Dict[str, List[Dict]] = {}       # ← NEW: only unsaved points
+        self.last_flush_time = time.time()                  # ← NEW
+        self.flush_interval = self.config['logging'].get('flush_interval_seconds', 10.0)
+        self.flush_max_pending = self.config['logging'].get('flush_max_pending', 100)
+
         # Setup logging
         logging.basicConfig(level=logging.WARNING)
         self.logger = logging.getLogger(__name__)
@@ -22,9 +27,12 @@ class OPCUALogger:
         self.packet_count = 0
         self.last_counter_reset = datetime.now()
 
-        # Initialize data structures for each tag
+        # Initialize structures
         for tag in self.config['tags']:
             self.tag_data[tag['name']] = []
+            self.pending_data[tag['name']] = []
+
+        self.stop_event = asyncio.Event()
 
 
     def _load_config(self, config_path: str) -> Dict[str, Any]:
@@ -108,20 +116,47 @@ class OPCUALogger:
             self.client.set_password(password)
             self.logger.info(f"Using username/password authentication for user: {username}")
 
-    def _write_to_json(self) -> None:
-        """Write current data to JSON file."""
+    def _append_line_to_jsonl(self, tag_name: str, data_point: dict):
+        """Append ONE data point to the .jsonl file"""
+        json_path = self.config['logging']['data_file']
         try:
-            json_path = self.config['logging']['data_file']
+            os.makedirs(os.path.dirname(json_path) or '.', exist_ok=True)
             
-            # Create directory if it doesn't exist
-            os.makedirs(os.path.dirname(json_path) if os.path.dirname(json_path) else '.', exist_ok=True)
+            record = {
+                "tag": tag_name,
+                "timestamp": data_point["timestamp"],
+                "value": data_point["value"]
+            }
             
-            # Write data to JSON file
-            with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump(self.tag_data, f, indent=2, ensure_ascii=False)
+            with open(json_path, 'a', encoding='utf-8') as f:
+                json.dump(record, f, ensure_ascii=False)
+                f.write('\n')
                 
         except Exception as e:
-            self.logger.error(f"Error writing to JSON: {e}")
+            self.logger.error(f"Failed to append to {json_path}: {e}")
+
+    def _flush_pending_to_disk(self):
+        """Write all currently pending data points to disk (append only)"""
+        if not any(self.pending_data.values()):
+            return
+
+        flushed_count = 0
+        for tag_name, points in self.pending_data.items():
+            if not points:
+                continue
+            for point in points:
+                self._append_line_to_jsonl(tag_name, point)
+                flushed_count += 1
+            # Optional: also add to full in-memory history if you keep it
+            # self.tag_data[tag_name].extend(points)
+            # if len(self.tag_data[tag_name]) > 2000:  # example limit
+            #     self.tag_data[tag_name] = self.tag_data[tag_name][-2000:]
+
+        self.pending_data = {k: [] for k in self.pending_data}  # clear pending
+        self.last_flush_time = time.time()
+        
+        if flushed_count > 0:
+            self.logger.debug(f"Flushed {flushed_count} new data points to disk")
 
 
     def _json_safe(self, v: Any) -> Any:
@@ -165,17 +200,34 @@ class OPCUALogger:
                 self.logger.warning(f"Received data change for unknown node: {node.nodeid.to_string()}")
                 return
 
-            timestamp = datetime.now().strftime(self.config['logging']['timestamp_format'])
+            # Handle timestamp format
+            timestamp_format = self.config['logging']['timestamp_format']
+            if timestamp_format == 'unix':
+                timestamp = str(time.time())
+            else:
+                timestamp = datetime.now().strftime(timestamp_format)
 
             data_point = {
                 "timestamp": timestamp,
                 "value": self._json_safe(val),   # <-- key change
             }
+
+            # Keep in memory (optional - remove if not needed)
             self.tag_data[tag_name].append(data_point)
 
-            self.logger.info(f"Data change for {tag_name}: {val} at {timestamp}")
-            self._write_to_json()
+            # Add to pending buffer (this is what gets flushed)
+            self.pending_data[tag_name].append(data_point)
+
             self.packet_count += 1
+            self.logger.info(f"Data change: {tag_name} = {val} @ {timestamp}")
+
+            # Check if we should flush now
+            now = time.time()
+            total_pending = sum(len(lst) for lst in self.pending_data.values())
+
+            if (now - self.last_flush_time >= self.flush_interval) or \
+               (total_pending >= self.flush_max_pending):
+               self._flush_pending_to_disk()
 
         except Exception as e:
             self.logger.error(f"Error handling data change: {e}")
@@ -243,14 +295,14 @@ class OPCUALogger:
             self.logger.warning(f"Packets/sec: {count}")
 
     async def run(self) -> None:
-        """Main run loop - keep the connection alive."""
+        """Main run loop - keep the connection alive and allow stopping from GUI."""
         try:
             await self.connect()
             asyncio.create_task(self._packet_counter_task())
             self.logger.info("OPC UA Logger is running. Press Ctrl+C to stop.")
             
-            # Keep the script running
-            while True:
+            # Main loop now checks stop_event
+            while not self.stop_event.is_set():
                 await asyncio.sleep(1)
                 
         except KeyboardInterrupt:
@@ -258,7 +310,9 @@ class OPCUALogger:
         except Exception as e:
             self.logger.error(f"Error in main loop: {e}")
         finally:
+            self._flush_pending_to_disk()
             await self.disconnect()
+            self.logger.info("Logger stopped gracefully.")
 
     async def disconnect(self) -> None:
         """Disconnect from OPC UA server and cleanup."""
