@@ -219,7 +219,7 @@ class OPCUALogger:
             self.pending_data[tag_name].append(data_point)
 
             self.packet_count += 1
-            self.logger.info(f"Data change: {tag_name} = {val} @ {timestamp}")
+            # self.logger.info(f"Data change: {tag_name} = {val} @ {timestamp}")
 
             # Check if we should flush now
             now = time.time()
@@ -230,7 +230,7 @@ class OPCUALogger:
                self._flush_pending_to_disk()
 
         except Exception as e:
-            self.logger.error(f"Error handling data change: {e}")
+            self.logger.warning(f"Error handling data change: {e}")
 
     async def _setup_subscriptions(self) -> None:
         """Setup subscriptions for all configured tags."""
@@ -255,10 +255,10 @@ class OPCUALogger:
                     self.logger.info(f"Subscribed to tag: {tag['name']} ({tag['node_id']})")
                     
                 except Exception as e:
-                    self.logger.error(f"Error subscribing to tag {tag['name']}: {e}")
+                    self.logger.warning(f"Error subscribing to tag {tag['name']}: {e}")
             
         except Exception as e:
-            self.logger.error(f"Error setting up subscriptions: {e}")
+            self.logger.warning(f"Error setting up subscriptions: {e}")
             raise
 
     async def connect(self) -> None:
@@ -292,7 +292,7 @@ class OPCUALogger:
             count = self.packet_count
             self.packet_count = 0
 
-            self.logger.warning(f"Packets/sec: {count}")
+            self.logger.info(f"Packets/sec: {count}")
 
     async def run(self) -> None:
         """Main run loop - keep the connection alive and allow stopping from GUI."""

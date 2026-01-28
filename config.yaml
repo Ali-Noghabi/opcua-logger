@@ -1,77 +1,66 @@
 logging:
   data_file: opcua_data.jsonl
-  timestamp_format: '%Y-%m-%d %H:%M:%S.%f'
   flush_interval_seconds: 10.0
   flush_max_pending: 100
+  timestamp_format: unix
 server:
-  certificate_path: /mnt/sda2/home-backup/Datall/pet_projects/opcua_logger/certs/opcua_client_certificate.pem
-  message_security_mode: None
+  certificate_path: /home/ali/Projects/opcua-logger/certs2/opcua_client_certificate.pem
+  message_security_mode: SignAndEncrypt
   password: null
-  private_key_path: /mnt/sda2/home-backup/Datall/pet_projects/opcua_logger/certs/opcua_client_private_key.pem
-  security_policy: None
+  private_key_path: /home/ali/Projects/opcua-logger/certs/opcua_client_private_key.pem
+  security_policy: Basic128Rsa15
   url: opc.tcp://192.168.2.84:48010
   username: null
 tags:
-  # Demo.Static.Matrix
-  - name: Demo_Static_Matrix_Float
-    node_id: ns=3;s=Demo.Static.Matrix.Float
-
-  # Demo.Static.Arrays
-  - name: Demo_Static_Arrays_Float
-    node_id: ns=3;s=Demo.Static.Arrays.Float
-  - name: Demo_Static_Arrays_Boolean
-    node_id: ns=3;s=Demo.Static.Arrays.Boolean
-  - name: Demo_Static_Arrays_UInt64
-    node_id: ns=3;s=Demo.Static.Arrays.UInt64
-  - name: Demo_Static_Arrays_Int64
-    node_id: ns=3;s=Demo.Static.Arrays.Int64
-
-  # Demo.Static.Scalar
-  - name: Demo_Static_Scalar_Float
-    node_id: ns=3;s=Demo.Static.Scalar.Float
-  - name: Demo_Static_Scalar_Boolean
-    node_id: ns=3;s=Demo.Static.Scalar.Boolean
-  - name: Demo_Static_Scalar_UInt64
-    node_id: ns=3;s=Demo.Static.Scalar.UInt64
-  - name: Demo_Static_Scalar_Int64
-    node_id: ns=3;s=Demo.Static.Scalar.Int64
-  - name: Demo_Static_Scalar_Double
-    node_id: ns=3;s=Demo.Static.Scalar.Double
-  - name: Demo_Static_Scalar_ByteString
-    node_id: ns=3;s=Demo.Static.Scalar.ByteString
-  - name: Demo_Static_Scalar_DateTime
-    node_id: ns=3;s=Demo.Static.Scalar.DateTime
-  - name: Demo_Static_Scalar_String
-    node_id: ns=3;s=Demo.Static.Scalar.String
-
-  # Dynamic.Dynamic.Matrix
-  - name: Demo_Dynamic_Matrix_Float
-    node_id: ns=3;s=Demo.Dynamic.Matrix.Float
-
-  # Demo.Dynamic.Arrays
-  - name: Demo_Dynamic_Arrays_Float
-    node_id: ns=3;s=Demo.Dynamic.Arrays.Float
-  - name: Demo_Dynamic_Arrays_Boolean
-    node_id: ns=3;s=Demo.Dynamic.Arrays.Boolean
-  - name: Demo_Dynamic_Arrays_UInt64
-    node_id: ns=3;s=Demo.Dynamic.Arrays.UInt64
-  - name: Demo_Dynamic_Arrays_Int64
-    node_id: ns=3;s=Demo.Dynamic.Arrays.Int64
-
-  # Demo.Dynamic.Scalar
-  - name: Demo_Dynamic_Scalar_Float
-    node_id: ns=3;s=Demo.Dynamic.Scalar.Float
-  - name: Demo_Dynamic_Scalar_Boolean
-    node_id: ns=3;s=Demo.Dynamic.Scalar.Boolean
-  - name: Demo_Dynamic_Scalar_UInt64
-    node_id: ns=3;s=Demo.Dynamic.Scalar.UInt64
-  - name: Demo_Dynamic_Scalar_Int64
-    node_id: ns=3;s=Demo.Dynamic.Scalar.Int64
-  - name: Demo_Dynamic_Scalar_Double
-    node_id: ns=3;s=Demo.Dynamic.Scalar.Double
-  - name: Demo_Dynamic_Scalar_ByteString
-    node_id: ns=3;s=Demo.Dynamic.Scalar.ByteString
-  - name: Demo_Dynamic_Scalar_DateTime
-    node_id: ns=3;s=Demo.Dynamic.Scalar.DateTime
-  - name: Demo_Dynamic_Scalar_String
-    node_id: ns=3;s=Demo.Dynamic.Scalar.String
+- name: Demo_Static_Matrix_Float
+  node_id: ns=3;s=Demo.Static.Matrix.Float
+- name: Demo_Static_Arrays_Float
+  node_id: ns=3;s=Demo.Static.Arrays.Float
+- name: Demo_Static_Arrays_Boolean
+  node_id: ns=3;s=Demo.Static.Arrays.Boolean
+- name: Demo_Static_Arrays_UInt64
+  node_id: ns=3;s=Demo.Static.Arrays.UInt64
+- name: Demo_Static_Arrays_Int64
+  node_id: ns=3;s=Demo.Static.Arrays.Int64
+- name: Demo_Static_Scalar_Float
+  node_id: ns=3;s=Demo.Static.Scalar.Float
+- name: Demo_Static_Scalar_Boolean
+  node_id: ns=3;s=Demo.Static.Scalar.Boolean
+- name: Demo_Static_Scalar_UInt64
+  node_id: ns=3;s=Demo.Static.Scalar.UInt64
+- name: Demo_Static_Scalar_Int64
+  node_id: ns=3;s=Demo.Static.Scalar.Int64
+- name: Demo_Static_Scalar_Double
+  node_id: ns=3;s=Demo.Static.Scalar.Double
+- name: Demo_Static_Scalar_ByteString
+  node_id: ns=3;s=Demo.Static.Scalar.ByteString
+- name: Demo_Static_Scalar_DateTime
+  node_id: ns=3;s=Demo.Static.Scalar.DateTime
+- name: Demo_Static_Scalar_String
+  node_id: ns=3;s=Demo.Static.Scalar.String
+- name: Demo_Dynamic_Matrix_Float
+  node_id: ns=3;s=Demo.Dynamic.Matrix.Float
+- name: Demo_Dynamic_Arrays_Float
+  node_id: ns=3;s=Demo.Dynamic.Arrays.Float
+- name: Demo_Dynamic_Arrays_Boolean
+  node_id: ns=3;s=Demo.Dynamic.Arrays.Boolean
+- name: Demo_Dynamic_Arrays_UInt64
+  node_id: ns=3;s=Demo.Dynamic.Arrays.UInt64
+- name: Demo_Dynamic_Arrays_Int64
+  node_id: ns=3;s=Demo.Dynamic.Arrays.Int64
+- name: Demo_Dynamic_Scalar_Float
+  node_id: ns=3;s=Demo.Dynamic.Scalar.Float
+- name: Demo_Dynamic_Scalar_Boolean
+  node_id: ns=3;s=Demo.Dynamic.Scalar.Boolean
+- name: Demo_Dynamic_Scalar_UInt64
+  node_id: ns=3;s=Demo.Dynamic.Scalar.UInt64
+- name: Demo_Dynamic_Scalar_Int64
+  node_id: ns=3;s=Demo.Dynamic.Scalar.Int64
+- name: Demo_Dynamic_Scalar_Double
+  node_id: ns=3;s=Demo.Dynamic.Scalar.Double
+- name: Demo_Dynamic_Scalar_ByteString
+  node_id: ns=3;s=Demo.Dynamic.Scalar.ByteString
+- name: Demo_Dynamic_Scalar_DateTime
+  node_id: ns=3;s=Demo.Dynamic.Scalar.DateTime
+- name: Demo_Dynamic_Scalar_String
+  node_id: ns=3;s=Demo.Dynamic.Scalar.String

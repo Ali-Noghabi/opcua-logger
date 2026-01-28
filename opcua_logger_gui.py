@@ -266,8 +266,8 @@ class OPCUALoggerGUI:
         conversion_frame = ttk.LabelFrame(self.actions_frame, text="Data Conversion", padding=10)
         conversion_frame.pack(fill=tk.X, padx=10, pady=5)
         
-        ttk.Label(conversion_frame, text="JSON File:").grid(row=0, column=0, sticky=tk.W, pady=2)
-        self.json_file_var = tk.StringVar(value="opcua_data.json")
+        ttk.Label(conversion_frame, text="JSONL File:").grid(row=0, column=0, sticky=tk.W, pady=2)
+        self.json_file_var = tk.StringVar(value="opcua_data.jsonl")
         json_frame = ttk.Frame(conversion_frame)
         json_frame.grid(row=0, column=1, sticky=tk.W+tk.E, pady=2)
         ttk.Entry(json_frame, textvariable=self.json_file_var, width=25).pack(side=tk.LEFT, fill=tk.X, expand=True)
@@ -280,7 +280,7 @@ class OPCUALoggerGUI:
         ttk.Entry(csv_frame, textvariable=self.csv_file_var, width=25).pack(side=tk.LEFT, fill=tk.X, expand=True)
         ttk.Button(csv_frame, text="Browse", command=self.browse_csv_file).pack(side=tk.RIGHT, padx=(5, 0))
         
-        ttk.Button(conversion_frame, text="Convert JSON to CSV", command=self.convert_json_to_csv).grid(row=2, column=0, columnspan=2, pady=10)
+        ttk.Button(conversion_frame, text="Convert JSONL to CSV", command=self.convert_json_to_csv).grid(row=2, column=0, columnspan=2, pady=10)
         
         conversion_frame.columnconfigure(1, weight=1)
     
@@ -330,10 +330,10 @@ class OPCUALoggerGUI:
             self.cert_dir_var.set(directory)
     
     def browse_json_file(self):
-        """Browse for JSON file."""
+        """Browse for JSONL file."""
         filename = filedialog.askopenfilename(
-            title="Select JSON File",
-            filetypes=[("JSON files", "*.json"), ("All files", "*.*")]
+            title="Select JSONL File",
+            filetypes=[("JSONL files", "*.jsonl"), ("All files", "*.*")]
         )
         if filename:
             self.json_file_var.set(filename)
@@ -575,7 +575,7 @@ class OPCUALoggerGUI:
                 qhandler = QueueHandler(self.log_queue)
                 qhandler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
                 logger.logger.addHandler(qhandler)
-                logger.logger.setLevel(logging.WARNING)
+                logger.logger.setLevel(logging.INFO)
 
                 try:
                     loop.run_until_complete(logger.run())
