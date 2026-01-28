@@ -54,8 +54,53 @@ jobs:
           # Install additional tools for AppImage
           sudo apt-get update
           sudo apt-get install -y patchelf desktop-file-utils
-        fi
-        pyinstaller opcua_logger_gui.spec --clean --noconfirm ${{ matrix.build_args }}
+          # Build normally first
+          pyinstaller opcua_logger_gui.spec --clean --noconfirm
+          # Then create AppImage manually
+          python3 -c "
+import os
+import sys
+from PyInstaller.utils.hooks import collect_data_files
+
+# Get the built executable
+exe_path = 'dist/OPCUALoggerGUI'
+if os.path.exists(exe_path):
+    # Create AppDir structure
+    os.makedirs('OPCUALoggerGUI.AppDir/usr/bin', exist_ok=True)
+    os.makedirs('OPCUALoggerGUI.AppDir/usr/share/applications', exist_ok=True)
+    
+    # Copy executable
+    os.system('cp dist/OPCUALoggerGUI OPCUALoggerGUI.AppDir/usr/bin/')
+    
+    # Copy data files
+    for src, dst in [('config.yaml', '.'), ('sample_tags.csv', '.')]:
+        os.system(f'cp {src} OPCUALoggerGUI.AppDir/usr/share/')
+    
+    # Create desktop file
+    with open('OPCUALoggerGUI.AppDir/usr/share/applications/OPCUALoggerGUI.desktop', 'w') as f:
+        f.write('''[Desktop Entry]
+Type=Application
+Name=OPC UA Logger GUI
+Exec=usr/bin/OPCUALoggerGUI
+Icon=usr/share/applications/OPCUALoggerGUI.png
+Categories=Development;Engineering;
+''')
+    
+    # Create AppRun script
+    with open('OPCUALoggerGUI.AppDir/AppRun', 'w') as f:
+        f.write('''#!/bin/bash
+HERE=\"$(dirname \"$(readlink -f \"${0}\")\"
+export LD_LIBRARY_PATH=\"${HERE}/usr/lib:${HERE}/usr/lib64:\${LD_LIBRARY_PATH}\"
+export PATH=\"${HERE}/usr/bin:\${PATH}\"
+export XDG_DATA_DIRS=\"${HERE}/usr/share\"
+exec \"${HERE}/usr/bin/OPCUALoggerGUI\" \"${@}\"
+''')
+    os.chmod('OPCUALoggerGUI.AppDir/AppRun', 0o755)
+    
+    print('AppImage structure created successfully')
+"
+        else
+          pyinstaller opcua_logger_gui.spec --clean --noconfirm
         
     - name: Prepare distribution files
       run: |
@@ -63,8 +108,10 @@ jobs:
         if [ "${{ matrix.platform }}" = "windows" ]; then
           cp "dist/OPCUALoggerGUI.exe" "dist/OPCUALoggerGUI_Distribution/"
         elif [ "${{ matrix.platform }}" = "linux-appimage" ]; then
-          # AppImage is already self-contained
-          mv "dist/OPCUALoggerGUI.AppImage" "dist/OPCUALoggerGUI_Distribution/"
+          # AppImage is created separately, just move it
+          if [ -f "OPCUALoggerGUI.AppImage" ]; then
+            mv "OPCUALoggerGUI.AppImage" "dist/OPCUALoggerGUI_Distribution/"
+          fi
         else
           cp "dist/OPCUALoggerGUI" "dist/OPCUALoggerGUI_Distribution/"
         fi
@@ -89,6 +136,8 @@ jobs:
         path: |
           dist/OPCUALoggerGUI${{ matrix.ext }}
           dist/OPCUALoggerGUI_${{ matrix.platform }}.*
+          dist/OPCUALoggerGUI.AppImage*
+        retention-days: 30
           
     - name: Create Release
       if: startsWith(github.ref, 'refs/tags/v')
@@ -97,6 +146,7 @@ jobs:
         files: |
           dist/OPCUALoggerGUI${{ matrix.ext }}
           dist/OPCUALoggerGUI_${{ matrix.platform }}.*
+          dist/OPCUALoggerGUI.AppImage*
         generate_release_notes: true
         draft: false
         prerelease: false
