@@ -46,4 +46,10 @@ fi
 # Create AppImage
 ./appimagetool-x86_64.AppImage OPCUALoggerGUI.AppDir
 
+# Move AppImage to dist directory
+if [ -f "OPCUALoggerGUI-x86_64.AppImage" ]; then
+    mv OPCUALoggerGUI-x86_64.AppImage dist/
+    echo "AppImage moved to dist/ directory"
+fi
+
 echo "AppImage created successfully"

@@ -11,6 +11,11 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: write
+      packages: write
+      issues: write
+      pull-requests: write
     strategy:
       matrix:
         include:
@@ -69,9 +74,9 @@ jobs:
         if [ "${{ matrix.platform }}" = "windows" ]; then
           cp "dist/OPCUALoggerGUI.exe" "dist/OPCUALoggerGUI_Distribution/"
         elif [ "${{ matrix.platform }}" = "linux-appimage" ]; then
-          # AppImage is created separately, just move it
-          if [ -f "OPCUALoggerGUI.AppImage" ]; then
-            mv "OPCUALoggerGUI.AppImage" "dist/OPCUALoggerGUI_Distribution/"
+          # AppImage is created in dist/ directory by the script
+          if [ -f "dist/OPCUALoggerGUI-x86_64.AppImage" ]; then
+            cp "dist/OPCUALoggerGUI-x86_64.AppImage" "dist/OPCUALoggerGUI_Distribution/"
           fi
         elif [ "${{ matrix.platform }}" = "macos" ]; then
           # On macOS, PyInstaller creates an .app bundle
@@ -100,9 +105,8 @@ jobs:
       with:
         name: OPCUALoggerGUI-${{ matrix.platform }}
         path: |
-          dist/OPCUALoggerGUI${{ matrix.ext }}
           dist/OPCUALoggerGUI_${{ matrix.platform }}.*
-          dist/OPCUALoggerGUI.AppImage*
+          dist/OPCUALoggerGUI-x86_64.AppImage*
         retention-days: 30
           
     - name: Create Release
@@ -110,11 +114,8 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          dist/OPCUALoggerGUI${{ matrix.ext }}
           dist/OPCUALoggerGUI_${{ matrix.platform }}.*
-          dist/OPCUALoggerGUI.AppImage*
+          dist/OPCUALoggerGUI-x86_64.AppImage*
         generate_release_notes: true
         draft: false
         prerelease: false
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
