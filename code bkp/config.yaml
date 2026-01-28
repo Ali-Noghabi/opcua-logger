@@ -1,0 +1,28 @@
+logging:
+  data_file: opcua_data.jsonl
+  timestamp_format: '%Y-%m-%d %H:%M:%S.%f'
+server:
+  certificate_path: C:\Users\user\Downloads\opcua-logger-main\opcua-logger-main\certs\opcua_client_certificate.pem
+  message_security_mode: None
+  password: null
+  private_key_path: C:\Users\user\Downloads\opcua-logger-main\opcua-logger-main\certs\opcua_client_private_key.pem
+  security_policy: None
+  url: opc.tcp://127.0.0.1:48010
+  username: null
+tags:
+- name: Demo_Static_Scalar_Float
+  node_id: ns=3;s=Demo.Static.Scalar.Float
+- name: Demo_Static_Scalar_Double
+  node_id: ns=3;s=Demo.Static.Scalar.Double
+- name: Demo_Static_Scalar_Boolean
+  node_id: ns=3;s=Demo.Static.Scalar.Boolean
+- name: Demo_Static_Scalar_String
+  node_id: ns=3;s=Demo.Static.Scalar.String
+- name: Demo_Dynamic_Scalar_Float
+  node_id: ns=3;s=Demo.Dynamic.Scalar.Float
+- name: Demo_Dynamic_Scalar_Double
+  node_id: ns=3;s=Demo.Dynamic.Scalar.Double
+- name: Demo_Dynamic_Scalar_Boolean
+  node_id: ns=3;s=Demo.Dynamic.Scalar.Boolean
+- name: Demo_Dynamic_Scalar_String
+  node_id: ns=3;s=Demo.Dynamic.Scalar.String

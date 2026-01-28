@@ -1,0 +1,13 @@
+# Runtime dependencies
+-r requirements.txt
+
+# Build dependencies
+pyinstaller>=5.0
+setuptools>=60.0
+
+# Platform-specific dependencies
+# Windows
+pywin32==306; sys_platform == "win32"
+
+# Linux (for AppImage)
+patchelf; sys_platform == "linux"
