@@ -61,6 +61,7 @@ jobs:
           .github/scripts/create_appimage.sh
         else
           pyinstaller opcua_logger_gui.spec --clean --noconfirm
+        fi
         
     - name: Prepare distribution files
       run: |
