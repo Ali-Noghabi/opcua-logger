@@ -579,8 +579,26 @@ class OPCUALoggerGUI:
 
                 try:
                     loop.run_until_complete(logger.run())
+                except ValueError as e:
+                    # Configuration errors
+                    error_msg = f"Configuration error: {e}"
+                    if "Certificate" in str(e) or "certificate" in str(e):
+                        error_msg += "\n\nPlease check certificate paths in Configuration tab."
+                    if "security policy" in str(e):
+                        error_msg += "\n\nPlease select a valid security policy in Configuration tab."
+                    self.log_queue.put(error_msg)
+                except FileNotFoundError as e:
+                    # Certificate files not found
+                    error_msg = f"Certificate file error: {e}\n\nPlease generate certificates in Actions tab or update paths in Configuration tab."
+                    self.log_queue.put(error_msg)
                 except Exception as e:
-                    self.log_queue.put(f"Logger error: {e}")
+                    # Other errors
+                    error_str = str(e).lower()
+                    if any(keyword in error_str for keyword in ['security', 'certificate', 'policy', 'badsecuritychecksfailed']):
+                        error_msg = f"Security error: {e}\n\nPossible causes:\n1. Server doesn't support the selected security policy\n2. Certificate files are invalid or expired\n3. Username/password authentication failed"
+                        self.log_queue.put(error_msg)
+                    else:
+                        self.log_queue.put(f"Logger error: {e}")
                 finally:
                     loop.close()
 

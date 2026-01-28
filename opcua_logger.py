@@ -74,37 +74,42 @@ class OPCUALogger:
         
         combination_key = (security_policy, message_security_mode)
         
-        try:
-            if combination_key not in security_combinations:
-                self.logger.warning(f"Unknown security combination: {security_policy} + {message_security_mode}, using None/None")
-                combination_key = ("None", "None")
+        if combination_key not in security_combinations:
+            error_msg = f"Unknown security combination: {security_policy} + {message_security_mode}"
+            self.logger.error(error_msg)
+            raise ValueError(error_msg)
+        
+        policy, _ = security_combinations[combination_key]
+        
+        if policy == ua.SecurityPolicyType.NoSecurity:
+            # No security - simple setup
+            self.logger.info(f"Using no security - Policy: {security_policy}, Mode: {message_security_mode}")
+            return
+        else:
+            # For encrypted connections, we need certificates
+            cert_path = self.config['server']['certificate_path']
+            key_path = self.config['server']['private_key_path']
             
-            policy, _ = security_combinations[combination_key]
+            if not cert_path or not key_path:
+                error_msg = f"Certificate and private key paths required for security policy: {security_policy}"
+                self.logger.error(error_msg)
+                raise ValueError(error_msg)
             
-            if policy == ua.SecurityPolicyType.NoSecurity:
-                # No security - simple setup
-                self.logger.info(f"Security policy: {security_policy}, Mode: {message_security_mode}")
-                return
-            else:
-                # For encrypted connections, we need certificates
-                cert_path = self.config['server']['certificate_path']
-                key_path = self.config['server']['private_key_path']
+            if not os.path.exists(cert_path):
+                error_msg = f"Certificate file not found: {cert_path}"
+                self.logger.error(error_msg)
+                raise FileNotFoundError(error_msg)
                 
-                if not cert_path or not key_path:
-                    raise ValueError(f"Certificate and private key paths required for security policy: {security_policy}")
-                
-                if not os.path.exists(cert_path) or not os.path.exists(key_path):
-                    raise FileNotFoundError(f"Certificate file {cert_path} or private key {key_path} not found")
-                
-                # Set security with certificates
-                self.client.set_security(policy, cert_path, key_path)
-                self.logger.info(f"Security policy: {security_policy}, Mode: {message_security_mode}")
-                self.logger.info(f"Using certificate: {cert_path}")
-                
-        except Exception as e:
-            self.logger.error(f"Error setting up security: {e}")
-            # Fallback to no security
-            self.logger.info("Fallback to no security")
+            if not os.path.exists(key_path):
+                error_msg = f"Private key file not found: {key_path}"
+                self.logger.error(error_msg)
+                raise FileNotFoundError(error_msg)
+            
+            # Set security with certificates
+            self.client.set_security(policy, cert_path, key_path)
+            self.logger.info(f"Security configured - Policy: {security_policy}, Mode: {message_security_mode}")
+            self.logger.info(f"Using certificate: {cert_path}")
+            self.logger.info(f"Using private key: {key_path}")
 
     async def _setup_authentication(self) -> None:
         """Setup authentication for the OPC UA client."""
@@ -277,12 +282,28 @@ class OPCUALogger:
             await self.client.connect()
             self.logger.info("Connected to OPC UA server")
             
-            # No initialization needed for JSON
             # Setup subscriptions
             await self._setup_subscriptions()
             
+        except ValueError as e:
+            # Configuration errors (missing certs, invalid policy, etc.)
+            self.logger.error(f"Configuration error: {e}")
+            raise
+        except FileNotFoundError as e:
+            # Certificate or key file not found
+            self.logger.error(f"File not found: {e}")
+            raise
         except Exception as e:
-            self.logger.error(f"Error connecting to OPC UA server: {e}")
+            # Connection errors - check if it might be security-related
+            error_str = str(e).lower()
+            if any(keyword in error_str for keyword in ['security', 'certificate', 'policy', 'badsecuritychecksfailed']):
+                self.logger.error(f"Security-related connection error: {e}")
+                self.logger.error("Possible causes:")
+                self.logger.error("1. Server doesn't support the selected security policy")
+                self.logger.error("2. Certificate files are invalid or expired")
+                self.logger.error("3. Username/password authentication failed")
+            else:
+                self.logger.error(f"Connection error: {e}")
             raise
 
     async def _packet_counter_task(self):
