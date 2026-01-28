@@ -65,7 +65,7 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='opcua_icon.ico' if sys.platform == 'win32' else None,
+    icon=None,
 )
 
 # For macOS, create an app bundle
@@ -97,7 +97,7 @@ elif sys.platform == 'win32':
         strip=False,
         upx=True,
         console=False,
-        icon='opcua_icon.ico',
+        icon=None,
     )
 else:
     # For Linux, create single executable
