@@ -227,6 +227,7 @@ class OPCUALoggerGUI:
         ttk.Button(button_frame, text="Add Tag", command=self.add_tag).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Edit Tag", command=self.edit_tag).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Delete Tag", command=self.delete_tag).pack(side=tk.LEFT, padx=5)
+        ttk.Button(button_frame, text="Clear All", command=self.clear_all_tags).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Import CSV", command=self.import_tags_csv).pack(side=tk.LEFT, padx=5)
         ttk.Button(button_frame, text="Export CSV", command=self.export_tags_csv).pack(side=tk.LEFT, padx=5)
         
@@ -297,6 +298,21 @@ class OPCUALoggerGUI:
         self.stop_button.pack(side=tk.LEFT, padx=5)
         
         ttk.Button(control_frame, text="Clear Logs", command=self.clear_logs).pack(side=tk.LEFT, padx=5)
+        
+        # Log filter buttons
+        filter_frame = ttk.Frame(self.log_frame)
+        filter_frame.pack(fill=tk.X, padx=10, pady=2)
+        
+        ttk.Label(filter_frame, text="Filter:").pack(side=tk.LEFT, padx=(0, 5))
+        
+        self.log_filter_var = tk.StringVar(value="All")
+        filters = ["All", "Info", "Warning", "Error", "Other"]
+        for filter_type in filters:
+            ttk.Radiobutton(filter_frame, text=filter_type, variable=self.log_filter_var, 
+                           value=filter_type, command=self.filter_logs).pack(side=tk.LEFT, padx=2)
+        
+        # Store all logs for filtering
+        self.all_logs = []
         
         # Log display
         log_frame = ttk.LabelFrame(self.log_frame, text="Logger Output", padding=10)
@@ -470,6 +486,21 @@ class OPCUALoggerGUI:
             except Exception as e:
                 messagebox.showerror("Error", f"Error exporting CSV: {e}")
     
+    def clear_all_tags(self):
+        """Clear all tags from configuration."""
+        if messagebox.askyesno("Confirm Clear All", "Are you sure you want to clear all tags? This action cannot be undone."):
+            # Clear config
+            self.config['tags'] = []
+            
+            # Clear treeview
+            for item in self.tags_tree.get_children():
+                self.tags_tree.delete(item)
+            
+            # Save configuration
+            self.save_configuration()
+            
+            messagebox.showinfo("Success", "All tags have been cleared")
+    
     def generate_certificate(self):
         """Generate OPC UA certificate."""
         try:
@@ -608,8 +639,7 @@ class OPCUALoggerGUI:
             # Update UI
             self.start_button.config(state=tk.DISABLED)
             self.stop_button.config(state=tk.NORMAL)
-            self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Logger started...\n")
-            self.log_text.see(tk.END)
+            self.add_log_entry("Logger started...")
 
         except Exception as e:
             messagebox.showerror("Error", f"Error starting logger: {e}")
@@ -622,11 +652,11 @@ class OPCUALoggerGUI:
                 # Signal the async logger to stop
                 if hasattr(self.opcua_logger_instance, 'stop_event'):
                     self.opcua_logger_instance.stop_event.set()
-                    self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Logger stopping...\n")
+                    self.add_log_entry("Logger stopping...")
                 else:
-                    self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Stop event not found, cannot fully stop\n")
+                    self.add_log_entry("Stop event not found, cannot fully stop")
             else:
-                self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Logger not running\n")
+                self.add_log_entry("Logger not running")
 
             # Update UI
             self.start_button.config(state=tk.NORMAL)
@@ -648,8 +678,7 @@ class OPCUALoggerGUI:
         try:
             while True:
                 line = self.log_queue.get_nowait()
-                self.log_text.insert(tk.END, f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {line}\n")
-                self.log_text.see(tk.END)
+                self.add_log_entry(line)
         except queue.Empty:
             pass
         
@@ -657,8 +686,69 @@ class OPCUALoggerGUI:
         self.root.after(100, self.monitor_log_queue)
     
     def clear_logs(self):
-        """Clear log display."""
+        """Clear log display and stored logs."""
         self.log_text.delete(1.0, tk.END)
+        self.all_logs = []
+    
+    def filter_logs(self):
+        """Filter logs based on selected filter."""
+        filter_type = self.log_filter_var.get()
+        
+        # Clear display
+        self.log_text.delete(1.0, tk.END)
+        
+        # Re-add filtered logs
+        for log_entry in self.all_logs:
+            should_show = False
+            
+            if filter_type == "All":
+                should_show = True
+            elif filter_type == "Info" and log_entry['level'] in ['INFO']:
+                should_show = True
+            elif filter_type == "Warning" and log_entry['level'] in ['WARNING']:
+                should_show = True
+            elif filter_type == "Error" and log_entry['level'] in ['ERROR']:
+                should_show = True
+            elif filter_type == "Other" and log_entry['level'] not in ['INFO', 'WARNING', 'ERROR']:
+                should_show = True
+            
+            if should_show:
+                self.log_text.insert(tk.END, log_entry['text'])
+        
+        self.log_text.see(tk.END)
+    
+    def add_log_entry(self, message, level="INFO"):
+        """Add a log entry with level classification."""
+        import time
+        timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
+        
+        # Classify log level
+        if 'error' in message.lower() or 'exception' in message.lower() or 'failed' in message.lower():
+            level = 'ERROR'
+        elif 'warning' in message.lower() or 'warn' in message.lower():
+            level = 'WARNING'
+        elif 'info' in message.lower():
+            level = 'INFO'
+        else:
+            level = 'OTHER'
+        
+        # Store log entry
+        log_entry = {
+            'timestamp': timestamp,
+            'level': level,
+            'text': f"[{timestamp}] {message}\n"
+        }
+        self.all_logs.append(log_entry)
+        
+        # Show if matches current filter
+        current_filter = self.log_filter_var.get()
+        if current_filter == "All" or \
+           (current_filter == "Info" and level == 'INFO') or \
+           (current_filter == "Warning" and level == 'WARNING') or \
+           (current_filter == "Error" and level == 'ERROR') or \
+           (current_filter == "Other" and level == 'OTHER'):
+            self.log_text.insert(tk.END, log_entry['text'])
+            self.log_text.see(tk.END)
 
 
 class TagDialog:

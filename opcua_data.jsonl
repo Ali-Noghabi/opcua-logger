@@ -7005,3 +7005,835 @@
 {"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769584810.2170134", "value": " - paper - scissors - lizard - spock *** rock"}
 {"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769584810.73002", "value": "per - scissors - lizard - spock *** rock - pa"}
 {"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769584811.2308912", "value": " scissors - lizard - spock *** rock - paper -"}
+{"tag": "Demo_Static_Matrix_Float", "timestamp": "1769585506.6358473", "value": [[[0.0, 3.1415927410125732, 6.2831854820251465, 9.42477798461914], [12.566370964050293, 15.707963943481445, 18.84955596923828, 21.99114990234375], [25.132741928100586, 28.274333953857422, 31.41592788696289, 34.55752182006836]], [[37.69911193847656, 40.84070587158203, 43.9822998046875, 47.1238899230957], [50.26548385620117, 53.40707778930664, 56.548667907714844, 59.69026184082031], [62.83185577392578, 65.97344970703125, 69.11504364013672, 72.25662994384766]]]}
+{"tag": "Demo_Static_Arrays_Float", "timestamp": "1769585506.6359413", "value": [20.0, 20.100000381469727, 20.200000762939453, 20.299999237060547, 20.399999618530273, 20.5, 20.600000381469727, 20.700000762939453, 20.799999237060547, 20.899999618530273]}
+{"tag": "Demo_Static_Arrays_Boolean", "timestamp": "1769585506.6359787", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Static_Arrays_UInt64", "timestamp": "1769585506.636008", "value": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+{"tag": "Demo_Static_Arrays_Int64", "timestamp": "1769585506.6360354", "value": [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]}
+{"tag": "Demo_Static_Scalar_Float", "timestamp": "1769585506.6360633", "value": 0.0}
+{"tag": "Demo_Static_Scalar_Boolean", "timestamp": "1769585506.6360865", "value": false}
+{"tag": "Demo_Static_Scalar_UInt64", "timestamp": "1769585506.636111", "value": 0}
+{"tag": "Demo_Static_Scalar_Int64", "timestamp": "1769585506.6361349", "value": 0}
+{"tag": "Demo_Static_Scalar_Double", "timestamp": "1769585506.6361618", "value": 0.0}
+{"tag": "Demo_Static_Scalar_ByteString", "timestamp": "1769585506.636189", "value": {"__type__": "bytes", "encoding": "base64", "value": "ABAgMEBQYHCAkA=="}}
+{"tag": "Demo_Static_Scalar_DateTime", "timestamp": "1769585506.6362362", "value": "2026-01-28T07:03:07.275531"}
+{"tag": "Demo_Static_Scalar_String", "timestamp": "1769585506.636291", "value": "Hello world"}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585506.6363215", "value": [[[20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625], [20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625], [20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625]], [[20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625], [20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625], [20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585506.9310725", "value": [[[20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875], [20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875], [20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875]], [[20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875], [20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875], [20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585507.4420202", "value": [[[20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375], [20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375], [20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375]], [[20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375], [20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375], [20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585507.9556828", "value": [[[20245.03125, 20245.03125, 20245.03125, 20245.03125], [20245.03125, 20245.03125, 20245.03125, 20245.03125], [20245.03125, 20245.03125, 20245.03125, 20245.03125]], [[20245.03125, 20245.03125, 20245.03125, 20245.03125], [20245.03125, 20245.03125, 20245.03125, 20245.03125], [20245.03125, 20245.03125, 20245.03125, 20245.03125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585508.4692037", "value": [[[20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875], [20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875], [20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875]], [[20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875], [20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875], [20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585508.9690413", "value": [[[20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125], [20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125], [20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125]], [[20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125], [20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125], [20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585509.4805207", "value": [[[20262.625, 20262.625, 20262.625, 20262.625], [20262.625, 20262.625, 20262.625, 20262.625], [20262.625, 20262.625, 20262.625, 20262.625]], [[20262.625, 20262.625, 20262.625, 20262.625], [20262.625, 20262.625, 20262.625, 20262.625], [20262.625, 20262.625, 20262.625, 20262.625]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585506.6363764", "value": [20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625, 20226.337890625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585506.9311507", "value": [20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875, 20232.935546875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585507.4420986", "value": [20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375, 20238.43359375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585507.9557614", "value": [20245.03125, 20245.03125, 20245.03125, 20245.03125, 20245.03125, 20245.03125, 20245.03125, 20245.03125, 20245.03125, 20245.03125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585508.4692833", "value": [20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875, 20250.529296875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585508.9691205", "value": [20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125, 20257.126953125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585509.480599", "value": [20262.625, 20262.625, 20262.625, 20262.625, 20262.625, 20262.625, 20262.625, 20262.625, 20262.625, 20262.625]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585506.6364167", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585506.9311938", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585507.4421406", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585507.9558043", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585508.469325", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585508.9691632", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585509.4806416", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585506.636457", "value": [18391, 18391, 18391, 18391, 18391, 18391, 18391, 18391, 18391, 18391]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585506.931238", "value": [18397, 18397, 18397, 18397, 18397, 18397, 18397, 18397, 18397, 18397]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585507.4421844", "value": [18402, 18402, 18402, 18402, 18402, 18402, 18402, 18402, 18402, 18402]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585507.9558477", "value": [18408, 18408, 18408, 18408, 18408, 18408, 18408, 18408, 18408, 18408]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585508.4693673", "value": [18413, 18413, 18413, 18413, 18413, 18413, 18413, 18413, 18413, 18413]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585508.9692068", "value": [18419, 18419, 18419, 18419, 18419, 18419, 18419, 18419, 18419, 18419]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585509.4807527", "value": [18424, 18424, 18424, 18424, 18424, 18424, 18424, 18424, 18424, 18424]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585506.6365", "value": [18391, 18391, 18391, 18391, 18391, 18391, 18391, 18391, 18391, 18391]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585506.9312797", "value": [18397, 18397, 18397, 18397, 18397, 18397, 18397, 18397, 18397, 18397]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585507.4422283", "value": [18402, 18402, 18402, 18402, 18402, 18402, 18402, 18402, 18402, 18402]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585507.9558887", "value": [18408, 18408, 18408, 18408, 18408, 18408, 18408, 18408, 18408, 18408]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585508.4694095", "value": [18413, 18413, 18413, 18413, 18413, 18413, 18413, 18413, 18413, 18413]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585508.9692488", "value": [18419, 18419, 18419, 18419, 18419, 18419, 18419, 18419, 18419, 18419]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585509.480795", "value": [18424, 18424, 18424, 18424, 18424, 18424, 18424, 18424, 18424, 18424]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585506.636544", "value": 20226.337890625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585506.9313223", "value": 20232.935546875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585507.4422705", "value": 20238.43359375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585507.9559324", "value": 20245.03125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585508.4694533", "value": 20250.529296875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585508.969293", "value": 20257.126953125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585509.480838", "value": 20262.625}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585506.6365824", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585506.9313622", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585507.4423103", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585507.955972", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585508.469492", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585508.969332", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585509.4808764", "value": false}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585506.6366224", "value": 18391}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585506.9314027", "value": 18397}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585507.4423513", "value": 18402}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585507.9560125", "value": 18408}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585508.4695327", "value": 18413}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585508.969373", "value": 18419}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585509.4809172", "value": 18424}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585506.6366632", "value": 18391}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585506.9314466", "value": 18397}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585507.4423935", "value": 18402}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585507.956057", "value": 18408}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585508.4695742", "value": 18413}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585508.9694164", "value": 18419}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585509.4809582", "value": 18424}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585506.6367047", "value": 20230.099999998736}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585506.93149", "value": 20236.699999998727}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585507.4424365", "value": 20242.19999999872}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585507.9560995", "value": 20248.79999999871}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585508.4696162", "value": 20254.299999998704}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585508.9694765", "value": 20260.899999998695}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585506.636749", "value": {"__type__": "bytes", "encoding": "base64", "value": "1ub2BhYmNkZWZnaGlqa2xg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585506.9315343", "value": {"__type__": "bytes", "encoding": "base64", "value": "3Oz8DBwsPExcbHyMnKy8zA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585507.4424806", "value": {"__type__": "bytes", "encoding": "base64", "value": "4fEBESExQVFhcYGRobHB0Q=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585507.9561443", "value": {"__type__": "bytes", "encoding": "base64", "value": "5/cHFyc3R1dnd4eXp7fH1w=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585508.4696612", "value": {"__type__": "bytes", "encoding": "base64", "value": "7PwMHCw8TFxsfIycrLzM3A=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585508.9695206", "value": {"__type__": "bytes", "encoding": "base64", "value": "8gISIjJCUmJygpKissLS4g=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585506.636803", "value": "2026-01-28T07:31:46.372794"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585506.93159", "value": "2026-01-28T07:31:46.932210"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585507.4425373", "value": "2026-01-28T07:31:47.396528"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585507.9562013", "value": "2026-01-28T07:31:47.956551"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585508.4697201", "value": "2026-01-28T07:31:48.423889"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585508.9695754", "value": "2026-01-28T07:31:48.986822"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585506.6368628", "value": "lizard - spock *** rock - paper - scissors - "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585506.931658", "value": " - spock *** rock - paper - scissors - lizard"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585507.442604", "value": "ock *** rock - paper - scissors - lizard - sp"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585507.9562688", "value": "* rock - paper - scissors - lizard - spock **"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585508.4697878", "value": "k - paper - scissors - lizard - spock *** roc"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585508.9696422", "value": "per - scissors - lizard - spock *** rock - pa"}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585509.9957254", "value": [[[20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625], [20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625], [20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625]], [[20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625], [20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625], [20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585510.4971313", "value": [[[20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125], [20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125], [20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125]], [[20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125], [20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125], [20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585511.007249", "value": [[[20280.21875, 20280.21875, 20280.21875, 20280.21875], [20280.21875, 20280.21875, 20280.21875, 20280.21875], [20280.21875, 20280.21875, 20280.21875, 20280.21875]], [[20280.21875, 20280.21875, 20280.21875, 20280.21875], [20280.21875, 20280.21875, 20280.21875, 20280.21875], [20280.21875, 20280.21875, 20280.21875, 20280.21875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585511.5223444", "value": [[[20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625], [20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625], [20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625]], [[20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625], [20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625], [20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585512.0364099", "value": [[[20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125], [20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125], [20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125]], [[20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125], [20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125], [20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585512.5559144", "value": [[[20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375], [20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375], [20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375]], [[20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375], [20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375], [20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585513.0648105", "value": [[[20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625], [20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625], [20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625]], [[20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625], [20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625], [20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585513.5797515", "value": [[[20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125], [20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125], [20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125]], [[20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125], [20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125], [20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585509.9958313", "value": [20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625, 20269.22265625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585510.497212", "value": [20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125, 20274.720703125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585511.0072656", "value": [20280.21875, 20280.21875, 20280.21875, 20280.21875, 20280.21875, 20280.21875, 20280.21875, 20280.21875, 20280.21875, 20280.21875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585511.5223618", "value": [20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625, 20286.81640625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585512.0364547", "value": [20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125, 20292.314453125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585512.5560913", "value": [20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375, 20298.912109375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585513.0648513", "value": [20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625, 20304.41015625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585513.5798311", "value": [20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125, 20311.0078125]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585509.9959002", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585510.4972527", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585511.0072734", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585511.5223703", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585512.036478", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585512.556153", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585513.064873", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585513.5798743", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585509.9959693", "value": [18430, 18430, 18430, 18430, 18430, 18430, 18430, 18430, 18430, 18430]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585510.4972975", "value": [18435, 18435, 18435, 18435, 18435, 18435, 18435, 18435, 18435, 18435]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585511.0072813", "value": [18440, 18440, 18440, 18440, 18440, 18440, 18440, 18440, 18440, 18440]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585511.5223787", "value": [18446, 18446, 18446, 18446, 18446, 18446, 18446, 18446, 18446, 18446]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585512.0365024", "value": [18451, 18451, 18451, 18451, 18451, 18451, 18451, 18451, 18451, 18451]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585512.5562277", "value": [18457, 18457, 18457, 18457, 18457, 18457, 18457, 18457, 18457, 18457]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585513.0648952", "value": [18462, 18462, 18462, 18462, 18462, 18462, 18462, 18462, 18462, 18462]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585513.5799193", "value": [18468, 18468, 18468, 18468, 18468, 18468, 18468, 18468, 18468, 18468]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585509.9960434", "value": [18430, 18430, 18430, 18430, 18430, 18430, 18430, 18430, 18430, 18430]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585510.4973786", "value": [18435, 18435, 18435, 18435, 18435, 18435, 18435, 18435, 18435, 18435]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585511.0072892", "value": [18440, 18440, 18440, 18440, 18440, 18440, 18440, 18440, 18440, 18440]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585511.522387", "value": [18446, 18446, 18446, 18446, 18446, 18446, 18446, 18446, 18446, 18446]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585512.0365252", "value": [18451, 18451, 18451, 18451, 18451, 18451, 18451, 18451, 18451, 18451]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585512.5563276", "value": [18457, 18457, 18457, 18457, 18457, 18457, 18457, 18457, 18457, 18457]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585513.0649161", "value": [18462, 18462, 18462, 18462, 18462, 18462, 18462, 18462, 18462, 18462]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585513.5799618", "value": [18468, 18468, 18468, 18468, 18468, 18468, 18468, 18468, 18468, 18468]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585509.9960995", "value": 20269.22265625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585510.4974217", "value": 20274.720703125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585511.0072973", "value": 20280.21875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585511.5223954", "value": 20286.81640625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585512.0365498", "value": 20292.314453125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585512.5564306", "value": 20298.912109375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585513.0649383", "value": 20304.41015625}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585509.996138", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585510.4974625", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585511.0073044", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585511.5224025", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585512.036572", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585512.556514", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585513.0649586", "value": true}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585509.9961808", "value": 18430}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585510.4975033", "value": 18435}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585511.0073116", "value": 18440}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585511.5224104", "value": 18446}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585512.0365944", "value": 18451}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585512.55661", "value": 18457}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585513.0649793", "value": 18462}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585509.996221", "value": 18430}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585510.4975448", "value": 18435}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585511.0073283", "value": 18440}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585511.5224185", "value": 18446}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585512.036619", "value": 18451}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585512.5566847", "value": 18457}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585513.0649993", "value": 18462}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585509.4971032", "value": 20266.399999998688}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585509.996262", "value": 20272.99999999868}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585510.4975882", "value": 20278.499999998672}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585511.0073364", "value": 20283.999999998665}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585511.5224268", "value": 20290.599999998656}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585512.0366433", "value": 20296.09999999865}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585512.5567532", "value": 20302.69999999864}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585513.0650213", "value": 20308.199999998633}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585509.4971635", "value": {"__type__": "bytes", "encoding": "base64", "value": "9wcXJzdHV2d3h5ent8fX5w=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585509.9963048", "value": {"__type__": "bytes", "encoding": "base64", "value": "/Q0dLT1NXW19jZ2tvc3d7Q=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585510.4976318", "value": {"__type__": "bytes", "encoding": "base64", "value": "AhIiMkJSYnKCkqKywtLi8g=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585511.0073571", "value": {"__type__": "bytes", "encoding": "base64", "value": "BxcnN0dXZ3eHl6e3x9fn9w=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585511.5224361", "value": {"__type__": "bytes", "encoding": "base64", "value": "DR0tPU1dbX2Nna29zd3t/Q=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585512.0366683", "value": {"__type__": "bytes", "encoding": "base64", "value": "EiIyQlJicoKSorLC0uLyAg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585512.5568335", "value": {"__type__": "bytes", "encoding": "base64", "value": "GCg4SFhoeIiYqLjI2Oj4CA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585513.0650434", "value": {"__type__": "bytes", "encoding": "base64", "value": "Hi4+Tl5ufo6err7O3u7+Dg=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585509.497223", "value": "2026-01-28T07:31:49.452034"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585509.9963615", "value": "2026-01-28T07:31:50.012902"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585510.497691", "value": "2026-01-28T07:31:50.482887"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585511.0073695", "value": "2026-01-28T07:31:50.947231"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585511.5224483", "value": "2026-01-28T07:31:51.510128"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585512.036701", "value": "2026-01-28T07:31:51.976161"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585512.55694", "value": "2026-01-28T07:31:52.536848"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585513.065074", "value": "2026-01-28T07:31:53.003340"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585509.4974637", "value": " scissors - lizard - spock *** rock - paper -"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585509.9964314", "value": "ors - lizard - spock *** rock - paper - sciss"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585510.4977825", "value": " lizard - spock *** rock - paper - scissors -"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585511.0073867", "value": "rd - spock *** rock - paper - scissors - liza"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585511.5224633", "value": "pock *** rock - paper - scissors - lizard - s"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585512.0367415", "value": "*** rock - paper - scissors - lizard - spock "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585512.5570712", "value": "ck - paper - scissors - lizard - spock *** ro"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585513.0651107", "value": "paper - scissors - lizard - spock *** rock - "}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585514.0921972", "value": [[[20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375], [20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375], [20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375]], [[20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375], [20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375], [20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585514.604109", "value": [[[20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625], [20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625], [20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625]], [[20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625], [20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625], [20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585515.115475", "value": [[[20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625], [20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625], [20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625]], [[20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625], [20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625], [20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585515.6296062", "value": [[[20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875], [20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875], [20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875]], [[20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875], [20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875], [20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585516.144175", "value": [[[20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625], [20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625], [20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625]], [[20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625], [20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625], [20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585516.6595943", "value": [[[20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875], [20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875], [20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875]], [[20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875], [20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875], [20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585514.092241", "value": [20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375, 20316.505859375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585514.6041853", "value": [20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625, 20323.103515625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585515.115552", "value": [20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625, 20328.6015625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585515.6296854", "value": [20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875, 20335.19921875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585516.1442518", "value": [20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625, 20340.697265625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585516.6596737", "value": [20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875, 20347.294921875]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585514.0922651", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585514.6042275", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585515.1155927", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585515.6297424", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585516.1442933", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585516.6597168", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585514.0922904", "value": [18473, 18473, 18473, 18473, 18473, 18473, 18473, 18473, 18473, 18473]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585514.6042717", "value": [18479, 18479, 18479, 18479, 18479, 18479, 18479, 18479, 18479, 18479]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585515.1156366", "value": [18484, 18484, 18484, 18484, 18484, 18484, 18484, 18484, 18484, 18484]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585515.6297877", "value": [18490, 18490, 18490, 18490, 18490, 18490, 18490, 18490, 18490, 18490]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585516.1443381", "value": [18495, 18495, 18495, 18495, 18495, 18495, 18495, 18495, 18495, 18495]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585516.6597621", "value": [18501, 18501, 18501, 18501, 18501, 18501, 18501, 18501, 18501, 18501]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585514.092314", "value": [18473, 18473, 18473, 18473, 18473, 18473, 18473, 18473, 18473, 18473]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585514.6043148", "value": [18479, 18479, 18479, 18479, 18479, 18479, 18479, 18479, 18479, 18479]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585515.1156778", "value": [18484, 18484, 18484, 18484, 18484, 18484, 18484, 18484, 18484, 18484]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585515.6298325", "value": [18490, 18490, 18490, 18490, 18490, 18490, 18490, 18490, 18490, 18490]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585516.144381", "value": [18495, 18495, 18495, 18495, 18495, 18495, 18495, 18495, 18495, 18495]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585516.6598034", "value": [18501, 18501, 18501, 18501, 18501, 18501, 18501, 18501, 18501, 18501]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585513.5917988", "value": 20311.0078125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585514.0923412", "value": 20316.505859375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585514.6043684", "value": 20323.103515625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585515.1157198", "value": 20328.6015625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585515.6298773", "value": 20335.19921875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585516.1444242", "value": 20340.697265625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585516.659846", "value": 20347.294921875}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585513.5918517", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585514.0923634", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585514.604409", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585515.1157584", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585515.6299167", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585516.1444647", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585516.6598845", "value": true}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585513.591895", "value": 18468}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585514.0923862", "value": 18473}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585514.6044495", "value": 18479}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585515.1157985", "value": 18484}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585515.6299596", "value": 18490}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585516.144505", "value": 18495}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585516.6599257", "value": 18501}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585513.5919378", "value": 18468}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585514.0924098", "value": 18473}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585514.6044908", "value": 18479}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585515.1158383", "value": 18484}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585515.6300046", "value": 18490}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585516.144548", "value": 18495}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585516.6599674", "value": 18501}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585513.5919814", "value": 20314.799999998624}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585514.0924344", "value": 20320.299999998617}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585514.6045327", "value": 20326.899999998608}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585515.115899", "value": 20332.3999999986}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585515.630051", "value": 20338.999999998592}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585516.144591", "value": 20344.499999998585}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585516.6600103", "value": 20351.099999998576}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585513.5920255", "value": {"__type__": "bytes", "encoding": "base64", "value": "IzNDU2Nzg5Ojs8PT4/MDEw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585514.0924594", "value": {"__type__": "bytes", "encoding": "base64", "value": "KDhIWGh4iJiouMjY6PgIGA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585514.6045775", "value": {"__type__": "bytes", "encoding": "base64", "value": "Lj5OXm5+jp6uvs7e7v4OHg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585515.1159422", "value": {"__type__": "bytes", "encoding": "base64", "value": "M0NTY3ODk6Ozw9Pj8wMTIw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585515.6300979", "value": {"__type__": "bytes", "encoding": "base64", "value": "OUlZaXmJmam5ydnp+QkZKQ=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585516.144636", "value": {"__type__": "bytes", "encoding": "base64", "value": "Pk5ebn6Onq6+zt7u/g4eLg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585516.6600556", "value": {"__type__": "bytes", "encoding": "base64", "value": "RFRkdISUpLTE1OT0BBQkNA=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585513.5920842", "value": "2026-01-28T07:31:53.567100"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585514.0924926", "value": "2026-01-28T07:31:54.032075"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585514.6046333", "value": "2026-01-28T07:31:54.590759"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585515.1159987", "value": "2026-01-28T07:31:55.056811"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585515.630156", "value": "2026-01-28T07:31:55.615578"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585516.1446915", "value": "2026-01-28T07:31:56.083786"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585516.66012", "value": "2026-01-28T07:31:56.645366"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585513.592154", "value": "- scissors - lizard - spock *** rock - paper "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585514.0925314", "value": "ssors - lizard - spock *** rock - paper - sci"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585514.6047037", "value": "- lizard - spock *** rock - paper - scissors "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585515.1160665", "value": "ard - spock *** rock - paper - scissors - liz"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585515.6302228", "value": "spock *** rock - paper - scissors - lizard - "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585516.144761", "value": " *** rock - paper - scissors - lizard - spock"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585516.6601906", "value": "ock - paper - scissors - lizard - spock *** r"}
+{"tag": "Demo_Static_Matrix_Float", "timestamp": "1769585551.5528758", "value": [[[0.0, 3.1415927410125732, 6.2831854820251465, 9.42477798461914], [12.566370964050293, 15.707963943481445, 18.84955596923828, 21.99114990234375], [25.132741928100586, 28.274333953857422, 31.41592788696289, 34.55752182006836]], [[37.69911193847656, 40.84070587158203, 43.9822998046875, 47.1238899230957], [50.26548385620117, 53.40707778930664, 56.548667907714844, 59.69026184082031], [62.83185577392578, 65.97344970703125, 69.11504364013672, 72.25662994384766]]]}
+{"tag": "Demo_Static_Arrays_Float", "timestamp": "1769585551.5529377", "value": [20.0, 20.100000381469727, 20.200000762939453, 20.299999237060547, 20.399999618530273, 20.5, 20.600000381469727, 20.700000762939453, 20.799999237060547, 20.899999618530273]}
+{"tag": "Demo_Static_Arrays_Boolean", "timestamp": "1769585551.5529623", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Static_Arrays_UInt64", "timestamp": "1769585551.5529869", "value": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+{"tag": "Demo_Static_Arrays_Int64", "timestamp": "1769585551.5530117", "value": [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]}
+{"tag": "Demo_Static_Scalar_Float", "timestamp": "1769585551.5530362", "value": 0.0}
+{"tag": "Demo_Static_Scalar_Boolean", "timestamp": "1769585551.5530572", "value": false}
+{"tag": "Demo_Static_Scalar_UInt64", "timestamp": "1769585551.5530808", "value": 0}
+{"tag": "Demo_Static_Scalar_Int64", "timestamp": "1769585551.5531032", "value": 0}
+{"tag": "Demo_Static_Scalar_Double", "timestamp": "1769585551.5531275", "value": 0.0}
+{"tag": "Demo_Static_Scalar_ByteString", "timestamp": "1769585551.5531638", "value": {"__type__": "bytes", "encoding": "base64", "value": "ABAgMEBQYHCAkA=="}}
+{"tag": "Demo_Static_Scalar_DateTime", "timestamp": "1769585551.5532026", "value": "2026-01-28T07:03:07.275531"}
+{"tag": "Demo_Static_Scalar_String", "timestamp": "1769585551.5532558", "value": "Hello world"}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585551.5532877", "value": [[[20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875], [20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875], [20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875]], [[20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875], [20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875], [20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585552.0652006", "value": [[[20764.046875, 20764.046875, 20764.046875, 20764.046875], [20764.046875, 20764.046875, 20764.046875, 20764.046875], [20764.046875, 20764.046875, 20764.046875, 20764.046875]], [[20764.046875, 20764.046875, 20764.046875, 20764.046875], [20764.046875, 20764.046875, 20764.046875, 20764.046875], [20764.046875, 20764.046875, 20764.046875, 20764.046875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585552.5799384", "value": [[[20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875], [20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875], [20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875]], [[20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875], [20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875], [20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585553.0795534", "value": [[[20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125], [20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125], [20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125]], [[20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125], [20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125], [20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585553.5937393", "value": [[[20781.640625, 20781.640625, 20781.640625, 20781.640625], [20781.640625, 20781.640625, 20781.640625, 20781.640625], [20781.640625, 20781.640625, 20781.640625, 20781.640625]], [[20781.640625, 20781.640625, 20781.640625, 20781.640625], [20781.640625, 20781.640625, 20781.640625, 20781.640625], [20781.640625, 20781.640625, 20781.640625, 20781.640625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585554.108137", "value": [[[20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125], [20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125], [20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125]], [[20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125], [20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125], [20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585554.6212888", "value": [[[20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125], [20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125], [20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125]], [[20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125], [20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125], [20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585551.5533426", "value": [20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875, 20757.44921875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585552.0652757", "value": [20764.046875, 20764.046875, 20764.046875, 20764.046875, 20764.046875, 20764.046875, 20764.046875, 20764.046875, 20764.046875, 20764.046875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585552.5800183", "value": [20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875, 20769.544921875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585553.0795734", "value": [20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125, 20776.142578125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585553.5938184", "value": [20781.640625, 20781.640625, 20781.640625, 20781.640625, 20781.640625, 20781.640625, 20781.640625, 20781.640625, 20781.640625, 20781.640625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585554.108216", "value": [20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125, 20788.23828125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585554.6213672", "value": [20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125, 20793.736328125]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585551.5533829", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585552.0653167", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585552.5800622", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585553.079583", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585553.5938609", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585554.1082594", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585554.6214092", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585551.5534263", "value": [18874, 18874, 18874, 18874, 18874, 18874, 18874, 18874, 18874, 18874]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585552.0653594", "value": [18880, 18880, 18880, 18880, 18880, 18880, 18880, 18880, 18880, 18880]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585552.5801063", "value": [18885, 18885, 18885, 18885, 18885, 18885, 18885, 18885, 18885, 18885]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585553.0795932", "value": [18891, 18891, 18891, 18891, 18891, 18891, 18891, 18891, 18891, 18891]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585553.593905", "value": [18896, 18896, 18896, 18896, 18896, 18896, 18896, 18896, 18896, 18896]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585554.108304", "value": [18902, 18902, 18902, 18902, 18902, 18902, 18902, 18902, 18902, 18902]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585554.6214528", "value": [18907, 18907, 18907, 18907, 18907, 18907, 18907, 18907, 18907, 18907]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585551.5534697", "value": [18874, 18874, 18874, 18874, 18874, 18874, 18874, 18874, 18874, 18874]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585552.065401", "value": [18880, 18880, 18880, 18880, 18880, 18880, 18880, 18880, 18880, 18880]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585552.5801501", "value": [18885, 18885, 18885, 18885, 18885, 18885, 18885, 18885, 18885, 18885]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585553.0796027", "value": [18891, 18891, 18891, 18891, 18891, 18891, 18891, 18891, 18891, 18891]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585553.593948", "value": [18896, 18896, 18896, 18896, 18896, 18896, 18896, 18896, 18896, 18896]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585554.1083462", "value": [18902, 18902, 18902, 18902, 18902, 18902, 18902, 18902, 18902, 18902]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585554.6214957", "value": [18907, 18907, 18907, 18907, 18907, 18907, 18907, 18907, 18907, 18907]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585551.5535142", "value": 20757.44921875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585552.0654447", "value": 20764.046875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585552.5802188", "value": 20769.544921875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585553.0796127", "value": 20776.142578125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585553.5940366", "value": 20781.640625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585554.1083918", "value": 20788.23828125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585554.6215422", "value": 20793.736328125}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585551.5535545", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585552.065484", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585552.5802798", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585553.0796216", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585553.5941105", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585554.1084318", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585554.621583", "value": true}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585551.553596", "value": 18874}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585552.0655253", "value": 18880}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585552.5803413", "value": 18885}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585553.0796306", "value": 18891}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585553.5941582", "value": 18896}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585554.1084719", "value": 18902}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585554.6216252", "value": 18907}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585551.5536385", "value": 18874}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585552.0655677", "value": 18880}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585552.580414", "value": 18885}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585553.0796404", "value": 18891}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585553.5941997", "value": 18896}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585554.1085157", "value": 18902}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585554.6216676", "value": 18907}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585551.553681", "value": 20761.399999998033}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585552.0656095", "value": 20767.999999998025}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585552.580478", "value": 20773.499999998017}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585553.0796502", "value": 20780.09999999801}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585553.5942423", "value": 20785.599999998}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585554.1085591", "value": 20792.199999997993}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585551.5537255", "value": {"__type__": "bytes", "encoding": "base64", "value": "ucnZ6fkJGSk5SVlpeYmZqQ=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585552.065654", "value": {"__type__": "bytes", "encoding": "base64", "value": "v8/f7/8PHy8/T19vf4+frw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585552.5805254", "value": {"__type__": "bytes", "encoding": "base64", "value": "xNTk9AQUJDREVGR0hJSktA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585553.07966", "value": {"__type__": "bytes", "encoding": "base64", "value": "ytrq+goaKjpKWmp6ipqqug=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585553.594287", "value": {"__type__": "bytes", "encoding": "base64", "value": "z9/v/w8fLz9PX29/j5+vvw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585554.108604", "value": {"__type__": "bytes", "encoding": "base64", "value": "1eX1BRUlNUVVZXWFlaW1xQ=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585551.5537784", "value": "2026-01-28T07:32:31.506551"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585552.065712", "value": "2026-01-28T07:32:32.066824"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585552.580595", "value": "2026-01-28T07:32:32.534239"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585553.0796738", "value": "2026-01-28T07:32:33.098104"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585553.5943434", "value": "2026-01-28T07:32:33.564214"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585554.1086595", "value": "2026-01-28T07:32:34.125715"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585551.5538325", "value": " scissors - lizard - spock *** rock - paper -"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585552.0657828", "value": "ors - lizard - spock *** rock - paper - sciss"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585552.5806994", "value": " lizard - spock *** rock - paper - scissors -"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585553.0796914", "value": "d - spock *** rock - paper - scissors - lizar"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585553.5944116", "value": "pock *** rock - paper - scissors - lizard - s"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585554.1087294", "value": "** rock - paper - scissors - lizard - spock *"}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585555.1342096", "value": [[[20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375], [20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375], [20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375]], [[20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375], [20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375], [20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585555.6472888", "value": [[[20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125], [20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125], [20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125]], [[20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125], [20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125], [20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585556.1617808", "value": [[[20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875], [20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875], [20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875]], [[20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875], [20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875], [20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585556.662812", "value": [[[20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375], [20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375], [20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375]], [[20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375], [20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375], [20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585557.1769137", "value": [[[20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125], [20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125], [20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125]], [[20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125], [20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125], [20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585557.6892176", "value": [[[20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375], [20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375], [20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375]], [[20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375], [20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375], [20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585558.2018943", "value": [[[20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375], [20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375], [20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375]], [[20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375], [20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375], [20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585558.713882", "value": [[[20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625], [20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625], [20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625]], [[20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625], [20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625], [20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585555.1342874", "value": [20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375, 20800.333984375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585555.6474097", "value": [20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125, 20805.83203125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585556.161858", "value": [20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875, 20812.4296875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585556.6628904", "value": [20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375, 20817.927734375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585557.176994", "value": [20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125, 20823.42578125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585557.6892967", "value": [20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375, 20830.0234375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585558.2019737", "value": [20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375, 20835.521484375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585558.7139602", "value": [20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625, 20842.119140625]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585555.1343303", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585555.647453", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585556.1618998", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585556.6629348", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585557.1770382", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585557.6893404", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585558.2020166", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585558.7140267", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585555.1343749", "value": [18913, 18913, 18913, 18913, 18913, 18913, 18913, 18913, 18913, 18913]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585555.6474967", "value": [18918, 18918, 18918, 18918, 18918, 18918, 18918, 18918, 18918, 18918]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585556.1619432", "value": [18924, 18924, 18924, 18924, 18924, 18924, 18924, 18924, 18924, 18924]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585556.6629794", "value": [18929, 18929, 18929, 18929, 18929, 18929, 18929, 18929, 18929, 18929]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585557.177082", "value": [18934, 18934, 18934, 18934, 18934, 18934, 18934, 18934, 18934, 18934]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585557.6894095", "value": [18940, 18940, 18940, 18940, 18940, 18940, 18940, 18940, 18940, 18940]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585558.202061", "value": [18945, 18945, 18945, 18945, 18945, 18945, 18945, 18945, 18945, 18945]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585558.7140722", "value": [18951, 18951, 18951, 18951, 18951, 18951, 18951, 18951, 18951, 18951]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585555.134418", "value": [18913, 18913, 18913, 18913, 18913, 18913, 18913, 18913, 18913, 18913]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585555.6475403", "value": [18918, 18918, 18918, 18918, 18918, 18918, 18918, 18918, 18918, 18918]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585556.161986", "value": [18924, 18924, 18924, 18924, 18924, 18924, 18924, 18924, 18924, 18924]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585556.6630213", "value": [18929, 18929, 18929, 18929, 18929, 18929, 18929, 18929, 18929, 18929]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585557.1771262", "value": [18934, 18934, 18934, 18934, 18934, 18934, 18934, 18934, 18934, 18934]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585557.6894765", "value": [18940, 18940, 18940, 18940, 18940, 18940, 18940, 18940, 18940, 18940]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585558.2021036", "value": [18945, 18945, 18945, 18945, 18945, 18945, 18945, 18945, 18945, 18945]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585558.7141156", "value": [18951, 18951, 18951, 18951, 18951, 18951, 18951, 18951, 18951, 18951]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585555.1344633", "value": 20800.333984375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585555.6475835", "value": 20805.83203125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585556.1620293", "value": 20812.4296875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585556.6630652", "value": 20817.927734375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585557.177171", "value": 20823.42578125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585557.6895216", "value": 20830.0234375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585558.2021482", "value": 20835.521484375}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585555.1345036", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585555.6476238", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585556.1620684", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585556.663105", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585557.1772108", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585557.6895626", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585558.2021892", "value": false}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585555.134545", "value": 18913}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585555.6476672", "value": 18918}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585556.162109", "value": 18924}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585556.663146", "value": 18929}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585557.1772523", "value": 18934}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585557.689613", "value": 18940}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585558.20223", "value": 18945}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585555.1345878", "value": 18913}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585555.6478138", "value": 18918}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585556.1621516", "value": 18924}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585556.6631877", "value": 18929}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585557.177296", "value": 18934}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585557.6896546", "value": 18940}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585558.2022712", "value": 18945}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585554.6344826", "value": 20797.699999997985}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585555.1346316", "value": 20804.299999997977}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585555.6478586", "value": 20809.79999999797}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585556.162195", "value": 20816.39999999796}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585556.6632295", "value": 20821.899999997953}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585557.1773744", "value": 20827.399999997946}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585557.6897008", "value": 20833.999999997937}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585558.2023153", "value": 20839.49999999793}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585554.6345396", "value": {"__type__": "bytes", "encoding": "base64", "value": "2ur6ChoqOkpaanqKmqq6yg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585555.1346762", "value": {"__type__": "bytes", "encoding": "base64", "value": "4PAAECAwQFBgcICQoLDA0A=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585555.6479096", "value": {"__type__": "bytes", "encoding": "base64", "value": "5fUFFSU1RVVldYWVpbXF1Q=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585556.1622427", "value": {"__type__": "bytes", "encoding": "base64", "value": "6/sLGys7S1tre4ubq7vL2w=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585556.663277", "value": {"__type__": "bytes", "encoding": "base64", "value": "8AAQIDBAUGBwgJCgsMDQ4A=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585557.177419", "value": {"__type__": "bytes", "encoding": "base64", "value": "9QUVJTVFVWV1hZWltcXV5Q=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585557.6897469", "value": {"__type__": "bytes", "encoding": "base64", "value": "+wsbKztLW2t7i5uru8vb6w=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585558.2023606", "value": {"__type__": "bytes", "encoding": "base64", "value": "AREhMUFRYXGBkaGxwdHh8Q=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585554.6345987", "value": "2026-01-28T07:32:34.590962"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585555.1347332", "value": "2026-01-28T07:32:35.151568"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585555.6479692", "value": "2026-01-28T07:32:35.617812"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585556.1623206", "value": "2026-01-28T07:32:36.179536"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585556.6633334", "value": "2026-01-28T07:32:36.649095"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585557.1774766", "value": "2026-01-28T07:32:37.115423"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585557.6898055", "value": "2026-01-28T07:32:37.675414"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585558.2024174", "value": "2026-01-28T07:32:38.234600"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585554.6346664", "value": "ck - paper - scissors - lizard - spock *** ro"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585555.1348026", "value": "aper - scissors - lizard - spock *** rock - p"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585555.6480398", "value": "- scissors - lizard - spock *** rock - paper "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585556.1623902", "value": "sors - lizard - spock *** rock - paper - scis"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585556.6634018", "value": "- lizard - spock *** rock - paper - scissors "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585557.1775463", "value": "ard - spock *** rock - paper - scissors - liz"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585557.6898773", "value": "spock *** rock - paper - scissors - lizard - "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585558.2024884", "value": " *** rock - paper - scissors - lizard - spock"}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585559.2149458", "value": [[[20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875], [20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875], [20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875]], [[20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875], [20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875], [20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585559.7149477", "value": [[[20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375], [20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375], [20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375]], [[20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375], [20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375], [20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585560.2281215", "value": [[[20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625], [20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625], [20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625]], [[20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625], [20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625], [20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585560.7405798", "value": [[[20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875], [20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875], [20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875]], [[20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875], [20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875], [20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585559.2150261", "value": [20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875, 20847.6171875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585559.715027", "value": [20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375, 20854.21484375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585560.2281997", "value": [20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625, 20859.712890625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585560.7407124", "value": [20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875, 20866.310546875]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585559.2150695", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585559.7150707", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585560.2282422", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585560.7407904", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585559.2151132", "value": [18956, 18956, 18956, 18956, 18956, 18956, 18956, 18956, 18956, 18956]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585559.7151144", "value": [18962, 18962, 18962, 18962, 18962, 18962, 18962, 18962, 18962, 18962]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585560.228287", "value": [18967, 18967, 18967, 18967, 18967, 18967, 18967, 18967, 18967, 18967]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585560.7408447", "value": [18973, 18973, 18973, 18973, 18973, 18973, 18973, 18973, 18973, 18973]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585559.215155", "value": [18956, 18956, 18956, 18956, 18956, 18956, 18956, 18956, 18956, 18956]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585559.7151573", "value": [18962, 18962, 18962, 18962, 18962, 18962, 18962, 18962, 18962, 18962]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585560.22833", "value": [18967, 18967, 18967, 18967, 18967, 18967, 18967, 18967, 18967, 18967]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585560.7408884", "value": [18973, 18973, 18973, 18973, 18973, 18973, 18973, 18973, 18973, 18973]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585558.7445643", "value": 20842.119140625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585559.215198", "value": 20847.6171875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585559.7152016", "value": 20854.21484375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585560.228375", "value": 20859.712890625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585560.7409337", "value": 20866.310546875}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585558.7446542", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585559.2152364", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585559.7152414", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585560.2284153", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585560.7409744", "value": true}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585558.7447264", "value": 18951}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585559.215277", "value": 18956}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585559.7152836", "value": 18962}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585560.228457", "value": 18967}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585560.7410152", "value": 18973}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585558.7448075", "value": 18951}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585559.2153196", "value": 18956}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585559.715325", "value": 18962}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585560.2284985", "value": 18967}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585560.7410593", "value": 18973}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585558.7448936", "value": 20846.09999999792}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585559.2153623", "value": 20851.599999997914}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585559.7153683", "value": 20858.199999997905}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585560.2285416", "value": 20863.699999997898}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585560.741104", "value": 20870.29999999789}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585558.7449853", "value": {"__type__": "bytes", "encoding": "base64", "value": "BhYmNkZWZnaGlqa2xtbm9g=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585559.2154055", "value": {"__type__": "bytes", "encoding": "base64", "value": "CxsrO0tba3uLm6u7y9vr+w=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585559.715412", "value": {"__type__": "bytes", "encoding": "base64", "value": "ESExQVFhcYGRobHB0eHxAQ=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585560.228587", "value": {"__type__": "bytes", "encoding": "base64", "value": "FiY2RlZmdoaWprbG1ub2Bg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585560.7411478", "value": {"__type__": "bytes", "encoding": "base64", "value": "HCw8TFxsfIycrLzM3Oz8DA=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585558.745093", "value": "2026-01-28T07:32:38.699342"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585559.2154624", "value": "2026-01-28T07:32:39.169678"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585559.7154691", "value": "2026-01-28T07:32:39.731377"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585560.2286446", "value": "2026-01-28T07:32:40.198663"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585560.7412066", "value": "2026-01-28T07:32:40.757558"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585558.7452178", "value": "ock - paper - scissors - lizard - spock *** r"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585559.21553", "value": " paper - scissors - lizard - spock *** rock -"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585559.7155402", "value": " - scissors - lizard - spock *** rock - paper"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585560.2287176", "value": "issors - lizard - spock *** rock - paper - sc"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585560.7413092", "value": " - lizard - spock *** rock - paper - scissors"}
+{"tag": "Demo_Static_Matrix_Float", "timestamp": "1769585728.8434396", "value": [[[0.0, 3.1415927410125732, 6.2831854820251465, 9.42477798461914], [12.566370964050293, 15.707963943481445, 18.84955596923828, 21.99114990234375], [25.132741928100586, 28.274333953857422, 31.41592788696289, 34.55752182006836]], [[37.69911193847656, 40.84070587158203, 43.9822998046875, 47.1238899230957], [50.26548385620117, 53.40707778930664, 56.548667907714844, 59.69026184082031], [62.83185577392578, 65.97344970703125, 69.11504364013672, 72.25662994384766]]]}
+{"tag": "Demo_Static_Arrays_Float", "timestamp": "1769585728.8435338", "value": [20.0, 20.100000381469727, 20.200000762939453, 20.299999237060547, 20.399999618530273, 20.5, 20.600000381469727, 20.700000762939453, 20.799999237060547, 20.899999618530273]}
+{"tag": "Demo_Static_Arrays_Boolean", "timestamp": "1769585728.843572", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Static_Arrays_UInt64", "timestamp": "1769585728.843601", "value": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+{"tag": "Demo_Static_Arrays_Int64", "timestamp": "1769585728.8436534", "value": [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]}
+{"tag": "Demo_Static_Scalar_Float", "timestamp": "1769585728.8436809", "value": 0.0}
+{"tag": "Demo_Static_Scalar_Boolean", "timestamp": "1769585728.8437037", "value": false}
+{"tag": "Demo_Static_Scalar_UInt64", "timestamp": "1769585728.843727", "value": 0}
+{"tag": "Demo_Static_Scalar_Int64", "timestamp": "1769585728.8437514", "value": 0}
+{"tag": "Demo_Static_Scalar_Double", "timestamp": "1769585728.8437772", "value": 0.0}
+{"tag": "Demo_Static_Scalar_ByteString", "timestamp": "1769585728.843804", "value": {"__type__": "bytes", "encoding": "base64", "value": "ABAgMEBQYHCAkA=="}}
+{"tag": "Demo_Static_Scalar_DateTime", "timestamp": "1769585728.8438513", "value": "2026-01-28T07:03:07.275531"}
+{"tag": "Demo_Static_Scalar_String", "timestamp": "1769585728.8439043", "value": "Hello world"}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585728.8439353", "value": [[[22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875], [22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875], [22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875]], [[22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875], [22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875], [22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585729.356505", "value": [[[22857.703125, 22857.703125, 22857.703125, 22857.703125], [22857.703125, 22857.703125, 22857.703125, 22857.703125], [22857.703125, 22857.703125, 22857.703125, 22857.703125]], [[22857.703125, 22857.703125, 22857.703125, 22857.703125], [22857.703125, 22857.703125, 22857.703125, 22857.703125], [22857.703125, 22857.703125, 22857.703125, 22857.703125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585729.867848", "value": [[[22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875], [22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875], [22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875]], [[22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875], [22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875], [22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585730.3803527", "value": [[[22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125], [22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125], [22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125]], [[22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125], [22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125], [22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585730.8954043", "value": [[[22875.296875, 22875.296875, 22875.296875, 22875.296875], [22875.296875, 22875.296875, 22875.296875, 22875.296875], [22875.296875, 22875.296875, 22875.296875, 22875.296875]], [[22875.296875, 22875.296875, 22875.296875, 22875.296875], [22875.296875, 22875.296875, 22875.296875, 22875.296875], [22875.296875, 22875.296875, 22875.296875, 22875.296875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585731.4081037", "value": [[[22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125], [22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125], [22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125]], [[22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125], [22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125], [22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585731.9221575", "value": [[[22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125], [22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125], [22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125]], [[22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125], [22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125], [22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585728.8439898", "value": [22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875, 22851.10546875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585729.3565845", "value": [22857.703125, 22857.703125, 22857.703125, 22857.703125, 22857.703125, 22857.703125, 22857.703125, 22857.703125, 22857.703125, 22857.703125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585729.8679287", "value": [22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875, 22863.201171875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585730.3804014", "value": [22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125, 22869.798828125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585730.8954864", "value": [22875.296875, 22875.296875, 22875.296875, 22875.296875, 22875.296875, 22875.296875, 22875.296875, 22875.296875, 22875.296875, 22875.296875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585731.4081342", "value": [22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125, 22881.89453125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585731.9222379", "value": [22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125, 22887.392578125]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585728.8440297", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585729.3566267", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585729.8679721", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585730.3804364", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585730.895529", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585731.408149", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585731.9222815", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585728.8440697", "value": [20778, 20778, 20778, 20778, 20778, 20778, 20778, 20778, 20778, 20778]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585729.35667", "value": [20784, 20784, 20784, 20784, 20784, 20784, 20784, 20784, 20784, 20784]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585729.8680167", "value": [20789, 20789, 20789, 20789, 20789, 20789, 20789, 20789, 20789, 20789]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585730.3804622", "value": [20795, 20795, 20795, 20795, 20795, 20795, 20795, 20795, 20795, 20795]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585730.895572", "value": [20800, 20800, 20800, 20800, 20800, 20800, 20800, 20800, 20800, 20800]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585731.4081645", "value": [20806, 20806, 20806, 20806, 20806, 20806, 20806, 20806, 20806, 20806]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585731.922324", "value": [20811, 20811, 20811, 20811, 20811, 20811, 20811, 20811, 20811, 20811]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585728.8441129", "value": [20778, 20778, 20778, 20778, 20778, 20778, 20778, 20778, 20778, 20778]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585729.356711", "value": [20784, 20784, 20784, 20784, 20784, 20784, 20784, 20784, 20784, 20784]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585729.8680584", "value": [20789, 20789, 20789, 20789, 20789, 20789, 20789, 20789, 20789, 20789]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585730.3804862", "value": [20795, 20795, 20795, 20795, 20795, 20795, 20795, 20795, 20795, 20795]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585730.8956144", "value": [20800, 20800, 20800, 20800, 20800, 20800, 20800, 20800, 20800, 20800]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585731.4081798", "value": [20806, 20806, 20806, 20806, 20806, 20806, 20806, 20806, 20806, 20806]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585731.9223657", "value": [20811, 20811, 20811, 20811, 20811, 20811, 20811, 20811, 20811, 20811]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585728.8441546", "value": 22851.10546875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585729.356753", "value": 22857.703125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585729.8681023", "value": 22863.201171875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585730.380512", "value": 22869.798828125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585730.8956578", "value": 22875.296875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585731.4081948", "value": 22881.89453125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585731.9224098", "value": 22887.392578125}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585728.8441932", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585729.3567927", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585729.8681417", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585730.3805454", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585730.8956976", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585731.4082086", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585731.9224486", "value": true}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585728.8442333", "value": 20778}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585729.3568327", "value": 20784}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585729.8681831", "value": 20789}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585730.3805795", "value": 20795}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585730.8957388", "value": 20800}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585731.408223", "value": 20806}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585731.9224896", "value": 20811}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585728.844275", "value": 20778}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585729.3568769", "value": 20784}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585729.868225", "value": 20789}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585730.380626", "value": 20795}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585730.8957808", "value": 20800}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585731.4082372", "value": 20806}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585731.922532", "value": 20811}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585728.8443174", "value": 22855.799999995263}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585729.3569202", "value": 22862.399999995254}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585729.8682673", "value": 22867.899999995247}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585730.380669", "value": 22874.499999995238}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585730.895824", "value": 22879.99999999523}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585731.408252", "value": 22886.599999995222}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585728.8443637", "value": {"__type__": "bytes", "encoding": "base64", "value": "KTlJWWl5iZmpucnZ6fkJGQ=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585729.3570004", "value": {"__type__": "bytes", "encoding": "base64", "value": "Lz9PX29/j5+vv8/f7/8PHw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585729.868312", "value": {"__type__": "bytes", "encoding": "base64", "value": "NERUZHSElKS0xNTk9AQUJA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585730.3807065", "value": {"__type__": "bytes", "encoding": "base64", "value": "OkpaanqKmqq6ytrq+goaKg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585730.895868", "value": {"__type__": "bytes", "encoding": "base64", "value": "P09fb3+Pn6+/z9/v/w8fLw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585731.4082673", "value": {"__type__": "bytes", "encoding": "base64", "value": "RVVldYWVpbXF1eX1BRUlNQ=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585728.8444548", "value": "2026-01-28T07:35:29.430735"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585729.3570557", "value": "2026-01-28T07:35:29.989339"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585729.8683677", "value": "2026-01-28T07:35:30.457215"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585730.3807583", "value": "2026-01-28T07:35:31.016951"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585730.8959262", "value": "2026-01-28T07:35:31.483453"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585731.4082875", "value": "2026-01-28T07:35:32.043975"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585728.8445215", "value": "zard - spock *** rock - paper - scissors - li"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585729.3571236", "value": " spock *** rock - paper - scissors - lizard -"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585729.868434", "value": "k *** rock - paper - scissors - lizard - spoc"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585730.38083", "value": "rock - paper - scissors - lizard - spock *** "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585730.8959954", "value": "- paper - scissors - lizard - spock *** rock "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585731.4083133", "value": "r - scissors - lizard - spock *** rock - pape"}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585732.4343212", "value": [[[22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375], [22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375], [22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375]], [[22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375], [22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375], [22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585732.9481914", "value": [[[22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125], [22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125], [22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125]], [[22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125], [22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125], [22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585733.4623792", "value": [[[22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375], [22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375], [22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375]], [[22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375], [22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375], [22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585733.976793", "value": [[[22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375], [22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375], [22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375]], [[22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375], [22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375], [22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585734.4889536", "value": [[[22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625], [22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625], [22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625]], [[22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625], [22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625], [22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585735.0008414", "value": [[[22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875], [22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875], [22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875]], [[22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875], [22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875], [22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585735.515782", "value": [[[22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375], [22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375], [22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375]], [[22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375], [22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375], [22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585736.0303497", "value": [[[22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625], [22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625], [22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625]], [[22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625], [22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625], [22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585732.4343388", "value": [22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375, 22893.990234375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585732.9482682", "value": [22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125, 22899.48828125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585733.4624584", "value": [22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375, 22906.0859375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585733.9768724", "value": [22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375, 22911.583984375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585734.4890325", "value": [22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625, 22918.181640625]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585735.0009215", "value": [22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875, 22923.6796875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585735.5159078", "value": [22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375, 22930.27734375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585736.030429", "value": [22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625, 22935.775390625]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585732.434347", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585732.9483106", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585733.4624996", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585733.976915", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585734.4890754", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585735.0009642", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585735.5159545", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585736.0304713", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585732.434355", "value": [20817, 20817, 20817, 20817, 20817, 20817, 20817, 20817, 20817, 20817]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585732.9483538", "value": [20822, 20822, 20822, 20822, 20822, 20822, 20822, 20822, 20822, 20822]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585733.4625418", "value": [20828, 20828, 20828, 20828, 20828, 20828, 20828, 20828, 20828, 20828]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585733.9769886", "value": [20833, 20833, 20833, 20833, 20833, 20833, 20833, 20833, 20833, 20833]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585734.489118", "value": [20839, 20839, 20839, 20839, 20839, 20839, 20839, 20839, 20839, 20839]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585735.0010068", "value": [20844, 20844, 20844, 20844, 20844, 20844, 20844, 20844, 20844, 20844]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585735.5159981", "value": [20850, 20850, 20850, 20850, 20850, 20850, 20850, 20850, 20850, 20850]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585736.0305145", "value": [20855, 20855, 20855, 20855, 20855, 20855, 20855, 20855, 20855, 20855]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585732.4343631", "value": [20817, 20817, 20817, 20817, 20817, 20817, 20817, 20817, 20817, 20817]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585732.9483976", "value": [20822, 20822, 20822, 20822, 20822, 20822, 20822, 20822, 20822, 20822]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585733.462583", "value": [20828, 20828, 20828, 20828, 20828, 20828, 20828, 20828, 20828, 20828]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585733.9770317", "value": [20833, 20833, 20833, 20833, 20833, 20833, 20833, 20833, 20833, 20833]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585734.4891608", "value": [20839, 20839, 20839, 20839, 20839, 20839, 20839, 20839, 20839, 20839]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585735.0010493", "value": [20844, 20844, 20844, 20844, 20844, 20844, 20844, 20844, 20844, 20844]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585735.5160408", "value": [20850, 20850, 20850, 20850, 20850, 20850, 20850, 20850, 20850, 20850]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585736.0305567", "value": [20855, 20855, 20855, 20855, 20855, 20855, 20855, 20855, 20855, 20855]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585732.4343712", "value": 22893.990234375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585732.9484415", "value": 22899.48828125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585733.462627", "value": 22906.0859375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585733.977076", "value": 22911.583984375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585734.489204", "value": 22918.181640625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585735.001093", "value": 22923.6796875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585735.5160832", "value": 22930.27734375}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585732.434379", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585732.9484808", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585733.4626658", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585733.977116", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585734.489243", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585735.0011327", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585735.5161226", "value": false}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585732.4343872", "value": 20817}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585732.948521", "value": 20822}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585733.4627078", "value": 20828}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585733.9771574", "value": 20833}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585734.4892838", "value": 20839}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585735.0011742", "value": 20844}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585735.5161638", "value": 20850}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585732.4343953", "value": 20817}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585732.948562", "value": 20822}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585733.4627497", "value": 20828}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585733.9772", "value": 20833}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585734.4893262", "value": 20839}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585735.001216", "value": 20844}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585735.516206", "value": 20850}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585731.9374158", "value": 22892.099999995215}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585732.4344037", "value": 22898.699999995206}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585732.9486039", "value": 22904.1999999952}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585733.4627929", "value": 22910.79999999519}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585733.9772434", "value": 22916.299999995183}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585734.4893692", "value": 22922.899999995174}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585735.0012612", "value": 22928.399999995167}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585735.516247", "value": 22934.999999995158}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585731.937478", "value": {"__type__": "bytes", "encoding": "base64", "value": "SlpqeoqaqrrK2ur6ChoqOg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585732.434412", "value": {"__type__": "bytes", "encoding": "base64", "value": "UGBwgJCgsMDQ4PAAECAwQA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585732.9486477", "value": {"__type__": "bytes", "encoding": "base64", "value": "VWV1hZWltcXV5fUFFSU1RQ=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585733.4628372", "value": {"__type__": "bytes", "encoding": "base64", "value": "W2t7i5uru8vb6/sLGys7Sw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585733.9772916", "value": {"__type__": "bytes", "encoding": "base64", "value": "YHCAkKCwwNDg8AAQIDBAUA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585734.4894137", "value": {"__type__": "bytes", "encoding": "base64", "value": "ZnaGlqa2xtbm9gYWJjZGVg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585735.0013058", "value": {"__type__": "bytes", "encoding": "base64", "value": "a3uLm6u7y9vr+wsbKztLWw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585735.51629", "value": {"__type__": "bytes", "encoding": "base64", "value": "cYGRobHB0eHxAREhMUFRYQ=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585731.9375398", "value": "2026-01-28T07:35:32.511685"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585732.4344242", "value": "2026-01-28T07:35:33.071340"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585732.9487045", "value": "2026-01-28T07:35:33.537040"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585733.462894", "value": "2026-01-28T07:35:34.096646"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585733.9773502", "value": "2026-01-28T07:35:34.565642"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585734.48947", "value": "2026-01-28T07:35:35.124586"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585735.001364", "value": "2026-01-28T07:35:35.589849"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585735.5163486", "value": "2026-01-28T07:35:36.150179"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585731.9376085", "value": "cissors - lizard - spock *** rock - paper - s"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585732.4344394", "value": "s - lizard - spock *** rock - paper - scissor"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585732.9487724", "value": "izard - spock *** rock - paper - scissors - l"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585733.4629624", "value": "- spock *** rock - paper - scissors - lizard "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585733.9774184", "value": "ck *** rock - paper - scissors - lizard - spo"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585734.489538", "value": " rock - paper - scissors - lizard - spock ***"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585735.0014331", "value": " - paper - scissors - lizard - spock *** rock"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585735.5164182", "value": "er - scissors - lizard - spock *** rock - pap"}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585736.5451035", "value": [[[22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875], [22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875], [22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875]], [[22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875], [22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875], [22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585737.0593834", "value": [[[22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375], [22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375], [22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375]], [[22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375], [22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375], [22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585737.5723896", "value": [[[22954.46875, 22954.46875, 22954.46875, 22954.46875], [22954.46875, 22954.46875, 22954.46875, 22954.46875], [22954.46875, 22954.46875, 22954.46875, 22954.46875]], [[22954.46875, 22954.46875, 22954.46875, 22954.46875], [22954.46875, 22954.46875, 22954.46875, 22954.46875], [22954.46875, 22954.46875, 22954.46875, 22954.46875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585738.08483", "value": [[[22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875], [22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875], [22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875]], [[22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875], [22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875], [22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585738.5980377", "value": [[[22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125], [22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125], [22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125]], [[22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125], [22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125], [22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125]]]}
+{"tag": "Demo_Dynamic_Matrix_Float", "timestamp": "1769585739.1135683", "value": [[[22972.0625, 22972.0625, 22972.0625, 22972.0625], [22972.0625, 22972.0625, 22972.0625, 22972.0625], [22972.0625, 22972.0625, 22972.0625, 22972.0625]], [[22972.0625, 22972.0625, 22972.0625, 22972.0625], [22972.0625, 22972.0625, 22972.0625, 22972.0625], [22972.0625, 22972.0625, 22972.0625, 22972.0625]]]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585736.5451822", "value": [22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875, 22942.373046875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585737.059463", "value": [22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375, 22947.87109375]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585737.5724702", "value": [22954.46875, 22954.46875, 22954.46875, 22954.46875, 22954.46875, 22954.46875, 22954.46875, 22954.46875, 22954.46875, 22954.46875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585738.08491", "value": [22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875, 22959.966796875]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585738.5981147", "value": [22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125, 22966.564453125]}
+{"tag": "Demo_Dynamic_Arrays_Float", "timestamp": "1769585739.1137955", "value": [22972.0625, 22972.0625, 22972.0625, 22972.0625, 22972.0625, 22972.0625, 22972.0625, 22972.0625, 22972.0625, 22972.0625]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585736.5452254", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585737.059504", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585737.5725129", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585738.0849535", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585738.598156", "value": [true, true, true, true, true, true, true, true, true, true]}
+{"tag": "Demo_Dynamic_Arrays_Boolean", "timestamp": "1769585739.11384", "value": [false, false, false, false, false, false, false, false, false, false]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585736.5452688", "value": [20861, 20861, 20861, 20861, 20861, 20861, 20861, 20861, 20861, 20861]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585737.0595484", "value": [20866, 20866, 20866, 20866, 20866, 20866, 20866, 20866, 20866, 20866]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585737.5725582", "value": [20872, 20872, 20872, 20872, 20872, 20872, 20872, 20872, 20872, 20872]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585738.0849974", "value": [20877, 20877, 20877, 20877, 20877, 20877, 20877, 20877, 20877, 20877]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585738.5981996", "value": [20883, 20883, 20883, 20883, 20883, 20883, 20883, 20883, 20883, 20883]}
+{"tag": "Demo_Dynamic_Arrays_UInt64", "timestamp": "1769585739.1138837", "value": [20888, 20888, 20888, 20888, 20888, 20888, 20888, 20888, 20888, 20888]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585736.545311", "value": [20861, 20861, 20861, 20861, 20861, 20861, 20861, 20861, 20861, 20861]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585737.059591", "value": [20866, 20866, 20866, 20866, 20866, 20866, 20866, 20866, 20866, 20866]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585737.5726018", "value": [20872, 20872, 20872, 20872, 20872, 20872, 20872, 20872, 20872, 20872]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585738.08504", "value": [20877, 20877, 20877, 20877, 20877, 20877, 20877, 20877, 20877, 20877]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585738.598241", "value": [20883, 20883, 20883, 20883, 20883, 20883, 20883, 20883, 20883, 20883]}
+{"tag": "Demo_Dynamic_Arrays_Int64", "timestamp": "1769585739.1139271", "value": [20888, 20888, 20888, 20888, 20888, 20888, 20888, 20888, 20888, 20888]}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585736.0411623", "value": 22935.775390625}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585736.545357", "value": 22942.373046875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585737.0596337", "value": 22947.87109375}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585737.5726469", "value": 22954.46875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585738.0850828", "value": 22959.966796875}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585738.5982842", "value": 22966.564453125}
+{"tag": "Demo_Dynamic_Scalar_Float", "timestamp": "1769585739.1139717", "value": 22972.0625}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585736.0412295", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585736.5453973", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585737.0596757", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585737.5726883", "value": false}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585738.0851228", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585738.5983243", "value": true}
+{"tag": "Demo_Dynamic_Scalar_Boolean", "timestamp": "1769585739.1140125", "value": true}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585736.0412865", "value": 20855}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585736.5454402", "value": 20861}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585737.0597186", "value": 20866}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585737.5727315", "value": 20872}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585738.0851636", "value": 20877}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585738.5983639", "value": 20883}
+{"tag": "Demo_Dynamic_Scalar_UInt64", "timestamp": "1769585739.114055", "value": 20888}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585736.0413353", "value": 20855}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585736.5454822", "value": 20861}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585737.05976", "value": 20866}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585737.572776", "value": 20872}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585738.0852056", "value": 20877}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585738.598406", "value": 20883}
+{"tag": "Demo_Dynamic_Scalar_Int64", "timestamp": "1769585739.114097", "value": 20888}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585736.0413775", "value": 22940.49999999515}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585736.545533", "value": 22947.099999995142}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585737.0598037", "value": 22952.599999995135}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585737.5728202", "value": 22959.199999995126}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585738.085249", "value": 22964.69999999512}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585738.598448", "value": 22971.29999999511}
+{"tag": "Demo_Dynamic_Scalar_Double", "timestamp": "1769585739.1141403", "value": 22977.8999999951}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585736.0414205", "value": {"__type__": "bytes", "encoding": "base64", "value": "doaWprbG1ub2BhYmNkZWZg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585736.5455792", "value": {"__type__": "bytes", "encoding": "base64", "value": "fIycrLzM3Oz8DBwsPExcbA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585737.0598485", "value": {"__type__": "bytes", "encoding": "base64", "value": "gZGhscHR4fEBESExQVFhcQ=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585737.5728672", "value": {"__type__": "bytes", "encoding": "base64", "value": "h5ent8fX5/cHFyc3R1dndw=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585738.085293", "value": {"__type__": "bytes", "encoding": "base64", "value": "jJysvMzc7PwMHCw8TFxsfA=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585738.598492", "value": {"__type__": "bytes", "encoding": "base64", "value": "kqKywtLi8gISIjJCUmJygg=="}}
+{"tag": "Demo_Dynamic_Scalar_ByteString", "timestamp": "1769585739.1141858", "value": {"__type__": "bytes", "encoding": "base64", "value": "mKi4yNjo+AgYKDhIWGh4iA=="}}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585736.0414784", "value": "2026-01-28T07:35:36.617688"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585736.545636", "value": "2026-01-28T07:35:37.180716"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585737.0599058", "value": "2026-01-28T07:35:37.646826"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585737.572924", "value": "2026-01-28T07:35:38.208498"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585738.0853496", "value": "2026-01-28T07:35:38.674162"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585738.5985477", "value": "2026-01-28T07:35:39.234056"}
+{"tag": "Demo_Dynamic_Scalar_DateTime", "timestamp": "1769585739.1142445", "value": "2026-01-28T07:35:39.795419"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585736.0415459", "value": "scissors - lizard - spock *** rock - paper - "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585736.5457041", "value": "rs - lizard - spock *** rock - paper - scisso"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585737.0599728", "value": "lizard - spock *** rock - paper - scissors - "}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585737.5729928", "value": " - spock *** rock - paper - scissors - lizard"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585738.0854182", "value": "ock *** rock - paper - scissors - lizard - sp"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585738.5986145", "value": "* rock - paper - scissors - lizard - spock **"}
+{"tag": "Demo_Dynamic_Scalar_String", "timestamp": "1769585739.114314", "value": "k - paper - scissors - lizard - spock *** roc"}
