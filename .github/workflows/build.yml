@@ -73,6 +73,11 @@ jobs:
           if [ -f "OPCUALoggerGUI.AppImage" ]; then
             mv "OPCUALoggerGUI.AppImage" "dist/OPCUALoggerGUI_Distribution/"
           fi
+        elif [ "${{ matrix.platform }}" = "macos" ]; then
+          # On macOS, PyInstaller creates an .app bundle
+          if [ -d "dist/OPCUALoggerGUI.app" ]; then
+            cp -r "dist/OPCUALoggerGUI.app" "dist/OPCUALoggerGUI_Distribution/"
+          fi
         else
           cp "dist/OPCUALoggerGUI" "dist/OPCUALoggerGUI_Distribution/"
         fi

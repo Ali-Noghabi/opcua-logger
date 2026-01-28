@@ -68,25 +68,43 @@ exe = EXE(
     icon='opcua_icon.ico' if sys.platform == 'win32' else None,
 )
 
-coll = COLLECT(
-    exe,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
-    strip=False,
-    upx=True,
-    upx_exclude=[],
-    name='OPCUALoggerGUI',
-    debug=False,
-    bootloader_ignore_signals=False,
-    runtime_tmpdir=None,
-    console=False,
-    disable_windowed_traceback=False,
-    argv_emulation=False,
-    target_arch=None,
-    codesign_identity=None,
-    entitlements_file=None,
-)
+# For macOS, create an app bundle
+if sys.platform == 'darwin':
+    app = BUNDLE(
+        exe,
+        name='OPCUALoggerGUI.app',
+        icon=None,  # macOS uses .icns files, not .ico
+        bundle_identifier='com.opcua.logger',
+        info_plist={
+            'CFBundleName': 'OPC UA Logger GUI',
+            'CFBundleDisplayName': 'OPC UA Logger GUI',
+            'CFBundleVersion': '1.2.0',
+            'CFBundleShortVersionString': '1.2.0',
+            'NSHighResolutionCapable': 'True',
+            'LSUIElement': 'False',
+        },
+    )
+else:
+    # For Windows and Linux, just create the executable
+    coll = COLLECT(
+        exe,
+        a.binaries,
+        a.zipfiles,
+        a.datas,
+        strip=False,
+        upx=True,
+        upx_exclude=[],
+        name='OPCUALoggerGUI',
+        debug=False,
+        bootloader_ignore_signals=False,
+        runtime_tmpdir=None,
+        console=False,
+        disable_windowed_traceback=False,
+        argv_emulation=False,
+        target_arch=None,
+        codesign_identity=None,
+        entitlements_file=None,
+    )
 
 # AppImage specific configuration for Linux
 if '--appimage' in sys.argv:
