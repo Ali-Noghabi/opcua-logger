@@ -86,8 +86,15 @@ jobs:
           if [ -d "dist/OPCUALoggerGUI.app" ]; then
             cp -r "dist/OPCUALoggerGUI.app" "dist/OPCUALoggerGUI_Distribution/"
           fi
-        else
-          cp "dist/OPCUALoggerGUI" "dist/OPCUALoggerGUI_Distribution/"
+        elif [ "${{ matrix.platform }}" = "linux" ]; then
+          # On Linux, check if it's a directory or single file
+          if [ -d "dist/OPCUALoggerGUI" ]; then
+            # Directory structure (old style)
+            cp -r "dist/OPCUALoggerGUI" "dist/OPCUALoggerGUI_Distribution/"
+          elif [ -f "dist/OPCUALoggerGUI" ]; then
+            # Single executable (new style)
+            cp "dist/OPCUALoggerGUI" "dist/OPCUALoggerGUI_Distribution/"
+          fi
         fi
         cp README.md "dist/OPCUALoggerGUI_Distribution/"
         cp sample_tags.csv "dist/OPCUALoggerGUI_Distribution/"

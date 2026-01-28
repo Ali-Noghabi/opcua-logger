@@ -84,26 +84,34 @@ if sys.platform == 'darwin':
             'LSUIElement': 'False',
         },
     )
-else:
-    # For Windows and Linux, just create the executable
-    coll = COLLECT(
-        exe,
+elif sys.platform == 'win32':
+    # For Windows, create single executable
+    coll = EXE(
+        pyz,
+        a.scripts,
         a.binaries,
         a.zipfiles,
         a.datas,
-        strip=False,
-        upx=True,
-        upx_exclude=[],
         name='OPCUALoggerGUI',
         debug=False,
-        bootloader_ignore_signals=False,
-        runtime_tmpdir=None,
+        strip=False,
+        upx=True,
         console=False,
-        disable_windowed_traceback=False,
-        argv_emulation=False,
-        target_arch=None,
-        codesign_identity=None,
-        entitlements_file=None,
+        icon='opcua_icon.ico',
+    )
+else:
+    # For Linux, create single executable
+    coll = EXE(
+        pyz,
+        a.scripts,
+        a.binaries,
+        a.zipfiles,
+        a.datas,
+        name='OPCUALoggerGUI',
+        debug=False,
+        strip=False,
+        upx=True,
+        console=False,
     )
 
 # AppImage specific configuration for Linux
